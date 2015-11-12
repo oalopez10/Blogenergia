@@ -1,2620 +1,388 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-  <head>
-    <b:include data='blog' name='all-head-content'/>
-    <title>
-	<b:if cond='data:blog.homepageUrl == data:blog.url'>
-		<data:blog.title/>
-	<b:else/>
-		<data:blog.pageName/> | <data:blog.title/>
-	</b:if>
-</title>
-    <b:skin><![CDATA[/*
-
-Blogger Template Style
-Base: Mínima
-Name: Minimalista
-Date: Mayo 2010
-Adaptación y Diseño por: compartidísimo
-URL:http://compartidisimo.blogspot.com
-
- */
-
-/* Variable definitions
-   ====================
-  
-   <Variable name="textcolor" description="Text Color"
-             type="color" default="#333" value="#393b3d">
-   <Variable name="linkcolor" description="Link Color"
-             type="color" default="#58a" value="#0b5394">
-   <Variable name="titlecolor" description="Post Title Color"
-             type="color" default="#999" value="#073763">
-   <Variable name="pagetitlecolor" description="Blog Title Color"
-             type="color" default="#ccc" value="#0c0c0c">
-    <Variable name="sidebarcolor" description="Sidebar Title Color"
-             type="color" default="#999" value="#0c0c0c">
-   <Variable name="sidebartextcolor" description="Sidebar Text Color"
-             type="color" default="#666" value="#55585b">
-   <Variable name="visitedlinkcolor" description="Visited Link Color"
-             type="color" default="#999" value="#073763">
-   <Variable name="bodyfont" description="Text Font"
-             type="font" default="normal normal 100% Georgia, Serif" value="normal normal 121% Arial, Tahoma, Helvetica, FreeSans, sans-serif;">
-   <Variable name="pagetitlefont" description="Blog Title Font"
-             type="font"
-             default="normal bold 200% 'Trebuchet MS',Trebuchet,Verdana,Sans-serif" value="normal bold 200% 'Trebuchet MS',Trebuchet,Verdana,Sans-serif">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <link rel="stylesheet" href="style.css" type="text/css" > 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link rel="shortcut icon" href="Cier.ico"/>
+<meta charset=UTF-8">
+    
    
-   <Variable name="postfooterfont" description="Post Footer Font"
-             type="font"
-             default="normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif" value="normal normal 76% Georgia, Utopia, 'Palatino Linotype', Palatino, serif">
-   <Variable name="startSide" description="Side where text starts in blog language"
-             type="automatic" default="left" value="left">
-   <Variable name="endSide" description="Side where text ends in blog language"
-             type="automatic" default="right" value="right">
-
-*/
-
-#layout .menu {width: 30% !important;
-height: 100% !important;}
-
-#navbar-iframe {
-        height: 0px;
-        visibility: hidden;
-        display: none;
-}
-
-
-
-body {
-margin:0 auto;
-background: url(http://4.bp.blogspot.com/-B-qKTaRim1c/VkMMs4c8wNI/AAAAAAAABc4/11eN4mfGFgI/s000/grisp.gif) repeat;
-color:$textcolor;
-font:x-small Georgia Serif;
-font-size/* */:/**/small;
-font-size: /**/small;
-text-align: left;
-position: relative;
-  }
-a:link {
-color:$linkcolor;
-text-decoration:none;
-  }
-a:visited {
-color:$visitedlinkcolor;
-text-decoration:none;
-  }
-
-a:hover {
-  color:$hovercolor;
-  text-decoration:none;
-}
-
-textarea{
-border:2px #111111 solid;
-background: #0c0c0c;
-color:#fff;
-}
-textarea:hover { 
-border:2px solid #4a0801;
-    }
-#wrap3 {
-background:none;
-width: 980px;
-position:relative;
-top: 0;
-left: 0;
-margin: 0 auto;
-}
-
-.menu-top li.selected a, #columnaf1, #columnaf2, #columnaf3, .post-body img {
-background: url(http://4.bp.blogspot.com/-B-qKTaRim1c/VkMMs4c8wNI/AAAAAAAABc4/11eN4mfGFgI/s000/grisp.gif) repeat;
-}
-    
-/* Header o cabecera */
-
-#header-wrapper {
-margin:0 auto;
-padding:0;
-width:980px;
-height:160px;
-}
-
-#header { 
-margin: 0;
-text-align:left;
-color:$pagetitlecolor;
-padding:0;
-width:650px;
-height: 150px;
-position: relative;
-}
-#header h1 {
-position:relative;
-top:40px;
-padding: 0 0 0 45px;
-font: $pagetitlefont;
-color:$pagetitlecolor;
-text-transform: uppercase;
-display: block;
-max-width: 640px;
-line-height:1.2em;
-text-shadow: 2px 1px 1px #ffffff;
-clear:both; 
- 
-}
-
-#header a {
-color:$pagetitlecolor;
-text-decoration:none;
-  }
-
-#header h1:hover {
-color:$pagetitlecolor;
-cursor: pointer;
-  }
-
-#header .description {
-position: relative;
-top:15px;
-left:0;
-padding:0px 0 15px 50px;
-max-width:640px;
-text-transform:none;
-letter-spacing:.2em;
-line-height: 1.0em;
-font: $descriptionfont;
-color: $descriptioncolor;
-text-shadow: 1px 1px 2px  #ffffff;
-
- }
-
-#header img {
-  margin-$startSide: auto;
-  margin-$endSide: auto;
-}
-
-a img {
-  border-width:0;
-  }
-
-
-
-/* Outer-Wrapper o envoltura*/
-
-.clear { 
-  clear: both;
-}
-
-#outer-wrapper {
-width:980px;
-margin:0 auto;
-padding:0px;
-text-align:left;
-position:relative;
-font: $bodyfont;
-
-  }
-
-#content-wrapper {
-position: relative;
-margin:0;
-padding:0;
-background:#ffffff url(http://4.bp.blogspot.com/-ZIwbjDgDKT8/VkMMtftKHhI/AAAAAAAABc8/kM9qZmqpZmA/s000/topm.png) no-repeat top left;
-width:980px;
-text-align: $startSide;
-border-left: 1px solid #ccc;
-border-right: 1px solid #ccc;
-border-bottom: 1px solid #ccc;
--moz-box-shadow: 3px 4px 6px #ccc; 
--webkit-box-shadow: 3px 4px 6px #ccc; 
-box-shadow: 3px 4px 6px #ccc; 
-filter: progid:DXImageTransform.Microsoft.Shadow(color='#ccc', Direction=145, Strength=3);
-clear:both;
-}
-  
-#center{
-background:none; 
-margin:0;
-}
-
-
-#main {
-width: 580px;
-margin:0;
-background:none;
-float: left;
-overflow: hidden; /* fix for long non-text content breaking IE sidebar float */
-display:inline;
-  }
-
-#sidebar-wrapper {
-margin: 45px 0 0 0;
-padding:0;
-width:370px;
-float: right;
-line-height:1.2em;
-overflow: hidden;  
-display:inline;
-}
-
-#sidebar-wrapper2 {
-margin: 10px 0 0 0;
-padding: 0;
-width: 370px;
-float: $endSide; 
-word-wrap: break-word; 
-overflow: hidden; 
-display: inline;
-}
-
-#column1 {
-width: 48%;
-float: left;
-}
-#column2 {
-width: 48%;
-float: right;
-}
-
-
-/* Headings */
-
-h2 {
-margin:1.5em 0 .75em;
-line-height: 1.4em;
-text-transform:none;
-letter-spacing:.2em;
-color:$sidebarcolor;
-}
-
-.comment-link {
-  margin-$startSide:.6em;
-}
-
-/* Menu top */
-#top_up {
-width:100%;
-height:40px;
-margin:0 auto;
-/*border-bottom: 1px solid #ffffff;*/
-clear:both;
-}
-#top_up, .menu, input.gsc-search-button{
-background: url(http://3.bp.blogspot.com/-EDU8k1UAQEE/VkMMt3ewvqI/AAAAAAAABdE/1GKus198mvg/s000/ntopup.gif) repeat-x;}
- #top_up{border-bottom: 1px solid #fafafa;}
-
-#crosscol-wrapper {
-margin:0 auto 0;
-padding:0;
-width:980px;
-height: 40px;
-clear: both;
-}
-#PageList1 h2{display:none;
-}
-.menu-top{
-background:none;
-width:440px;
-padding:0px;
-margin:0;
-height:41px;
-position: relative;
-top: 0;
-left:0;
-float: right;
-clear:both;
- }
-
-.menu-top ul{
-margin:0;
-list-style:none;
-padding:0px;
-}
-
-.menu-top li{
-float:left;
-margin:0;
-padding:0;
-}
-
-
-.menu-top li a{
-float:left;
-display:inline-block;
-text-align:center;
-height:37px;
-margin: 0;
-padding:4px 8px 0 10px;
-text-shadow: 1px 1px 1px #000;
-text-decoration:none;
-line-height: 190%;
-text-decoration:none;
-white-space: nowrap;
-}
-
-.menu-top li a{
-float: none;
-}
-.menu-top a, .menu-top a:active, .menu-top a:visited{
-color:#ffffff;
-font-size:18px;
-}
-.menu-top li a:hover {
-color: #04c1d7;
-cursor: pointer;
-}
-
-.menu-top li.selected a {
-margin:0;
-font-weight:bold;
-color:#3b3939;
-text-shadow: 1px 1px 1px #ffffff;
-border-right: 1px solid #fafafa;
-border-left: 1px solid #fafafa;
-}
-
-
-
-/* Menú horizontal*/
-.menu {
-position: relative; height:45px; width:739px;
-top: 0px;
-left:0;
-margin: 0; padding: 0;
-border-top: 1px solid #ffffff;
-border-left: 1px solid #cccccc;
-}
-.menu ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-position: absolute;
-z-index: 100;
-}
-.menu li {
-float: left;
-line-height: 220%;
-padding: 6px 0 0 5px;
-}
-.menu a, .menu a:active, .menu a:visited, .menu a:hover {
-color: #fff;
-padding: 5px 8px 0 14px;
-text-decoration: none;
-}
-#slide {
-background:#080808;
-border: 1px solid #050505;
-/*border-bottom: 3px solid #ef1c0c;*/
-height: 30px;
-position: absolute;
-top: 0px;
-left: 0;
-z-index: 10;
-margin: 7px 0 0 5px;
-}
-
-#contenedor{
-position: relative;
-top: 0;
-left:0;
-width: 981px;
-heigth: 55px;
-margin: 0 auto;
-padding :0;
-border-right: 1px solid #cccccc;
-}
-
-
-
-/* Contenedor y estilos del buscador */
-
-#search-conte{
-width: 240px;
-height: 45px;
-position: absolute;
-float: right;
-top:0px;
-right: 0px;
-margin:0;
-padding: 0;
-background:#fafafa;
-border-top: 1px solid #ffffff;
-}
-
-.search-c h2 {
-display: none;}
-
-input.gsc-search-button {
-font-size:13px;
-color:#ffffff;
-border: 0;
-margin: 0;
-padding:0 5px 3px 4px;
-height: 50px;
-width: 48px;
-line-height: 80%;
-}
-input.gsc-search-button:hover{
-cursor:pointer;
-}
-
-input.gsc-input {
-width: 100%;
-margin: 0;
-color: #0b0b0b;
-font-size: 16px;
-background: none;
-border:none !important;
-padding:6px 2px 6px 0;
-}
-
-.gsc-branding-text, .gsc-branding-img-noclear {
-display:none;
-}
-
-/* Posts o estilos de las entradas */
-.post {
-margin: 7px 0 10px 10px;
-padding: 0;
-  }
-.post h3 {
-margin:0px 0 0 5px;
-padding:18px 0 2px 3px;
-font-size:160%;
-font-weight:normal;
-line-height:1.4em;
-color:$titlecolor;
-background:none;
-}
-
-.post h3 a, .post h3 a:visited, .post h3 strong {
-text-decoration:none;
-color:$titlecolor;
-font-weight:normal;
-}
-
-.post h3 strong, .post h3 a:hover {
-  color:$textcolor;
-}
-
-.post-body {
-  margin:0 0 .75em;
-  line-height:1.6em;
-}
-
-.post-body ul li {
-list-style-type:square;
-} 
-
-.post-body blockquote {
-  line-height:1.3em;  
-}
-
-.post-footer {
-margin:40px 8px 4px 0px;
-color:$sidebarcolor;
-text-transform:none;
-letter-spacing:.1em;
-font: $postfooterfont;
-line-height: 1.4em;
-padding:4px 0 4px 7px;
-background: #efefef;
-border-right: 4px solid #f4f4f3;
-border-bottom: 4px solid #f4f4f3;
-}
-
-.post img, table.tr-caption-container {
-}
-
-.post-body img{
-padding: 0px;
-padding: 6px;
-border:1px solid #cccccc;
--moz-box-shadow: 2px 2px 3px #969696; 
--webkit-box-shadow: 2px 2px 3px #969696; 
-filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=145, Strength=3);
-}
-
-.post-body img:hover {
-}
-
-
-
-.tr-caption-container img {
-  border: none;
-  padding: 0;
-}
-.post blockquote {
- margin: 1em 20px;
-padding:8px 5px 8px 5px;
-border:1px #777777 dashed;
-}
-
-.post blockquote:hover{}
-
-
-.post blockquote p {
-  margin: .75em 0;
-}
-
-
-/* Comments o comentarios */
-#comments h4 {
-margin: 1em 3em;
-line-height:1.0em;
-color:#0b0b0b;
-font-size:17px;
-}
-
-#comments-block {
-width: 480px;
-margin:0 0 0 10px;
-padding:10px 8px 5px 10px;
-line-height:1.0em;
-color:#0b0b0b;
-position: relative;
-top: 0;left: 30px;
-}
-
-
-
-#comments-block img {
-width: 50px;
-height:50px;
-border: 1px solid #cccccc;
-margin: 0;
-padding: 0;
-}
-
-
-#comments-block .comment-body {
-margin:0 0 1.2em;
-
-}
-.comment-author {
-margin:.5em 0 0;
-padding:6px;
-font-weight:bold;
-color:#000;
-font-size:16px;
-
-}
-#comments-block .comment-footer {
-margin:0px 0 10px 0;
-font-size:10px;
-
-}
-#comments-block .comment-footer img {
-width:15px;
-height:15px;
-border: 0;
-background:none;
-margin: 0;
-padding: 0;
-}
-
-#comments-block .comment-footer  a{
-color:#0b0b0b;
-}
-
-#comments-block .comment-body p {
-margin:0;
-padding: 5px 5px 8px 5px;
-font-size:18px;
-
-}
-#comments-block a{
-color:#0b00f0;
-text-decoration:none
-}
-#comments-block a:hover{
-color:#000;
-}
-#comments-block a:visited{
-color:#0b0b0b;
-}
-
-
-.deleted-comment {
-font-style:italic;
-color:gray;
-}
-#comments-block .avatar-image-container {
-}
-#comments-block .avatar-image-container.avatar-stock {
-background: url(http://4.bp.blogspot.com/-Jw4WXyeQEJg/VkMMuVv7E7I/AAAAAAAABdM/1X_D9llWWl8/s000/per.png) no-repeat;
-width:50px;
-height:50px;
-}
-
-#comment-editor{
-margin-left:0px;
-
-}
-.comment-form{
-background:none;
-padding:10px 0px 10px 20px;
-margin-left:25px;
-}
-
-#blog-pager-newer-link {
-float: $endSide;
-margin-right:70px;
-}
- 
-#blog-pager-older-link {
-float: $startSide;
-margin-left:70px;
- }
-
-#blog-pager { 
-text-align: center;
- }
-
-.feed-links {
-clear: both;
-line-height: 2.5em;
-}
-
-.feed-links {
-display:none;
-}
-
-
-
-/* Sidebar  */
-.sidebar { 
-margin-top:-30px;
-margin-right:0px;
-line-height:1.2em;
-color: $sidebartextcolor;
-word-wrap: break-word;   
-overflow: hidden;     
-
-}
-
-.sidebar ul {
-margin:0;
-padding:0;
-list-style-type:square;
-}
-
-.sidebar ul li { 
-padding:3px 0 6px 4px;
-line-height:100%;
-/*border-bottom: 1px solid #0c0c0c;*/
-}
-
-.sidebar li {
-margin:0;
-padding-top:0;
-padding-$endSide:0;
-padding-bottom:.2em;
-padding-$startSide:12px;
-text-indent:0px;
- }
-
-.sidebar li:hover {
-background:#eeeeee;
-
-}
-
-.sidebar .widget { 
-margin:0 10px 15px 5px;
-/*border: 1px solid #eeeeee;
-background: #faf9f9;*/
-}
-
-.sidebar h2 {
-font-weight:normal;
-letter-spacing: 0em;
-padding:6px 4px 0 8px;
-font-size:17px;
-text-shadow: 1px 1px 1px #ffffff;
-line-height:190%;
-background: #efefef;
-border-right: 4px solid #fafafa;
-border-bottom: 4px solid #fafafa;
-}
-.sidebar img {
-background: #cccccc;
-padding: 4px;
-}
-main .widget{
-font-weight:bold;
-}
-
-/*ESTILOS DE LOS ENLACES DE LAS ETIQUETAS*/
-
-#Label1 ul{
-margin:0;
-padding:0 0 20px 30px;
-}
-#Label1 ul li{
-margin: 0;
-padding:2px 0 5px 0;
-list-style-type: square; 
-color: #232323;  
-}
-#Label1 ul li:hover { 
-color: #04c1d7;
-} 
-#Label1 li{
-margin:0;
-padding:0;
-background: none;
-}
-#Label1 li a{
-font-size: 14px;
-padding:0;
-margin:0;
-text-decoration: none;
-}
-#Label1 li a:hover {
-color: #000000; 
-font-weight: normal; 
-}
-
-/* Profile o perfil */
-.profile-img { 
-float: $startSide;
-margin-top: 0;
-margin-$endSide: 5px;
-margin-bottom: 5px;
-margin-$startSide: 0;
-padding: 0px;
-border: 4px solid $bordercolor;
-}
-
-.profile-data {
-margin:0;
-text-transform:none;
-letter-spacing:.1em;
-font: $postfooterfont;
-color: $sidebarcolor;
-font-weight: bold;
-line-height: 1.6em;
-}
-
-.profile-datablock { 
-margin:.5em 0 .5em;
-}
-
-.profile-textblock { 
-margin: 0.5em 0;
-line-height: 1.6em;
-}
-
-.profile-link { 
-font: $postfooterfont;
-text-transform: none;
-letter-spacing: .1em;
-}
-
-
-.status-msg-wrap{
-display:none;
-}
-
-
-
-/* Footer o pie */
-
-#footer-wrapper{
-background:#0b0b0b;
-width:100%;
-margin:20px auto 0;
-border-top:1px solid #ffffff;
-}
-#footer {
-background:none;
-clear:both;
-margin:0;
-padding-top:15px;
-line-height: 1.6em;
-text-transform:none;
- 
-}
-#after-footer {
-width: 980px;
-margin: 0 auto;
-padding:0 0 40px 0;
-}
-
-#columnaf1, #columnaf2, #columnaf3 {
-background: url(http://4.bp.blogspot.com/-B-qKTaRim1c/VkMMs4c8wNI/AAAAAAAABc4/11eN4mfGFgI/s000/grisp.gif) repeat;
-border: 8px solid #ffffff;
-width:300px;
-top:5px;
-position:relative;
-.box-shadow 
--moz-box-shadow: 2px 2px 3px #000000; /* for Firefox 3.5+ */
--webkit-box-shadow: 2px 2px 3px #000000; /* for Safari and Chrome */
-filter: progid:DXImageTransform.Microsoft.Shadow(color='#000000', Direction=145, Strength=3);
-text-align:left;
-font-size:18px;
-overflow: hidden;
-}
-
-.columna1 ul li, .columna2 ul li, .columna3 ul li { 
-background:none; 
-padding:0 0 0 2px;
-list-style-type:square;
-text-align:left;
-color:#0b0b0b;
-}
-
-#columnaf1 {
-float:left;
-top:20px;
-left:0;
-padding:0;
-}
-
-.columna1 h2, .columna2 h2, .columna3 h2 {
-margin:3px 3px 0 3px;
-padding: 5px 4px 2px 4px;
-font-size:18px;
-line-height:100%;
-text-align:center;
-color:#0b0b0b;
-font-weight:bold;
-letter-spacing: 0.1em;
-text-shadow: 2px 1px 1px #ffffff
-}
-
-
-#columnaf2 {
-margin:0 auto;
-text-align:left;
-top:15px;
-}
-
-
-#columnaf3 {
-float:right;
-top:20px;
-right:0;
-}
-
-
-#end2 {
-width:100%;
-height:30px;
-font-size:11px;
-clear:both;
-margin:0 auto;
-background:#030303;
-border-top: 4px solid #000;
-}
-
-
-/* Estilos link leer más*/
-
-a.readmore  {
-background:none;
-padding:0 4px 0 4px;
-margin:40px 20px 10px 0;
-text-align:center;
-background: #efefef;
-padding:4px 8px 4px 6px;
-border: 2px solid #fafafa;
-}
-
-a.readmore:hover{
-color: #0ca3c9
-}
-
-
-]]></b:skin>
-
-<script src='http://www.google.com/jsapi'/><script>google.load(&quot;prototype&quot;, &quot;1.6.1.0&quot;);window.JSON = {  parse: function (st) { return st.evalJSON(); },  stringify: function(obj) { return Object.toJSON(obj); }};google.load(&quot;scriptaculous&quot;, &quot;1.8.3&quot;);</script>
-
-
-<!-- Script Menú con slider por http://www.scriptiny.com/  -->
-<script type='text/javascript'>
-//<![CDATA[
-var menuSlider=function(){
-	var m,e,g,s,q,i; e=[]; q=8; i=8;
-	return{
-		init:function(j,k){
-			m=document.getElementById(j); e=m.getElementsByTagName('li');
-			var i,l,w,p; i=0; l=e.length;
-			for(i;i<l;i++){
-				var c,v; c=e[i]; v=c.value; if(v==1){s=c; w=c.offsetWidth; p=c.offsetLeft}
-				c.onmouseover=function(){menuSlider.mo(this)}; c.onmouseout=function(){menuSlider.mo(s)};
-			}
-			g=document.getElementById(k); g.style.width=w+'px'; g.style.left=p+'px';
-		},
-		mo:function(d){
-			clearInterval(m.tm);
-			var el,ew; el=parseInt(d.offsetLeft); ew=parseInt(d.offsetWidth);
-			m.tm=setInterval(function(){menuSlider.mv(el,ew)},i);
-		},
-		mv:function(el,ew){
-			var l,w; l=parseInt(g.offsetLeft); w=parseInt(g.offsetWidth);
-			if(l!=el||w!=ew){
-				if(l!=el){var ld,lr,li; ld=(l>el)?-1:1; lr=Math.abs(el-l); li=(lr<q)?ld*lr:ld*q; g.style.left=(l+li)+'px'}
-				if(w!=ew){var wd,wr,wi; wd=(w>ew)?-1:1; wr=Math.abs(ew-w); wi=(wr<q)?wd*wr:wd*q; g.style.width=(w+wi)+'px'}
-			}else{clearInterval(m.tm)}
-}};}();
-//]]>
-</script>
-
-<!-- ESTILOS Y SCRIPT RESUMEN DE ENTRADAS -->
-<style type='text/css'>
-#layout .menu {width: 30% !important;
-height: 100% !important;}
-.contemini {
-position:relative;
-overflow:hidden;
-width:200px;
-height:180px;
-float:left;
-margin:0px 10px 0px 0px;
--webkit-box-shadow: 1px 2px 6px #7777;
--moz-box-shadow: 1px 2px 6px #777;
-box-shadow: 1px 2px 6px #777;
-filter: progid:DXImageTransform.Microsoft.Shadow(color=&#39;#777&#39;, Direction=145, Strength=2);
-border: 6px solid #e7e7e7;
-}
-.miniaturas {
-width:200px;
-height:180px;
-background: no-repeat scroll 50% 40% #fff;
-}
+<title>Plataformas CIER</title>
+<style type="text/css">
+<!--
+#menu {			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+			border-radius:5px;
+			-webkit-box-shadow:2px 2px 4px #888;
+			-moz-box-shadow:2px 2px 4px #888;
+}
+-->
 </style>
+</head>
 
+<body>
+<table width="1000" border="0" align="center">
+  <tr>
+    <td>&nbsp;</td>
+    <td width="176">&nbsp;</td>
+    <td colspan="4">&nbsp;</td>
+    <td width="1">&nbsp;</td>
+    <td width="13">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="8"><img src="BANNER.jpg" width="1150" height="180" /></td>
+  </tr>
 
-<script type='text/javascript'>
-//<![CDATA[
+  <tr>
+    <td width="508" colspan="3" class="encuesta"><table width="800" border="0" align="left">
+      <tr></tr>
+      <tr></tr>
+      <tr>
+        <td><object data="https://www.onlineencuesta.com/s/09669dc" width="800" height="840" align="texttop">
+          <embed src="https://www.onlineencuesta.com/s/09669dcwidth=&quot;600&quot;" width="800" height="840" align="texttop"> </embed>
+        </object></td>
+      </tr>
+    </table></td>
+    <td width="406" colspan="-2"><p><em><FONT SIZE=3>En esta columna usted encontrará una explicación breve de cada una de las plataformas propuestas en el ejercicio de Planeación Estratégica de la CIER.</font></em>      </p>
+      <ul class="menu">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li><a href="">Planificación y Seguridad Energética
+          </a>
+          <ul> 
+            <li></li>
+            <li></li>
+            <li><p></p></li>
+            <li><u><strong>DEFINICIÓN: </strong></u>El  seguimiento  de la demanda de energía,  los recursos energéticos y la infraestructura   con que cuentan los países y la región para asegurar el abastecimiento  energético actual y futuro son los temas de interés en esta plataforma.  Asimismo incluye las actividades que permitan el desarrollo de la planificación  regional  y el referenciamiento de las metodologías y   herramientas de apoyo en la materia.</li>
+            <li><p></p></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li><u><strong>TEMÁTICAS  ESPECÍFICAS:</strong></u>
+              <div>1)Escenarios  energéticos  regionales.</div>
+              <div>2)Evolución,  tendencia y desagregación de la demanda energética en la región.</div>
+              <div>3)Diversificación  de la  matriz con nuevas fuentes y su impacto. El rol de la Generación Distribuida en  la planificación y su impacto  en la  seguridad  energética. </div>
+              <div>4)Análisis  y  referenciamiento de los diferentes esquemas, metodologías y buenas prácticas  de planificación.</div>
+              <div>5)Complementariedad  de recursos  y ofertas. Soluciones de almacenamiento. </div>
+              <div>6)Promover  y gestionar el desarrollo  de una planificación indicativa regional de generación  y transmisión.</div>
+              <div>7)Informes  de  seguimiento fuentes y recursos, la oferta y de la evolución de los sistema  energéticos y planes de expansión /   Disponibilidad de combustibles</div>
+            </li>
+          </ul>
+        </li> 
+        
+        <li><a href="">Integración Energética regional
+          </a>
+          <ul>
+            <li></li>
+            <li><p></p></li>
+            <li><u><strong>DEFINICIÓN: </strong></u>La  integración energética regional es el principal objetivo y razón de ser de la  CIER; por lo tanto la CIER debe generar espacios de análisis y discusión con  participación activa de todos los agentes, responsables de  políticas, tomadores  de decisión e  inversionistas. Igualmente desarrollar estudios y plantear alternativas que  permitan tanto la utilización de la infraestructura actual como el desarrollo  de nuevas interconexiones por medio de intercambios de energía permanentes  en el  tiempo.  Oportunidades de desarrollo de recursos energéticos compartidos.</li>
+            <li><p></p></li>
+            <li><u><strong>TEMÁTICAS </strong></u><u><strong>ESPECÍFICAS:</strong></u>
+              <div>1)Seguimiento  del funcionamiento de interconexiones existentes y monitoreo de desempeño.</div>
+              <div>2)Identificación  oportunidades  de potenciales proyectos, intercambios energéticos internacionales  y desarrollos de infraestructura regional.</div>
+              <div>3)Sistemas  de información  electro energéticos y  bases de datos  regional –  SIGER- ATLAS.</div>
+              <div>4)Beneficios,  ventajas, oportunidades y valor agregado de la interconexión. Esquemas para  hacerlas permanente en el tiempo. Beneficios para la cadena productiva y alternativa  de garantía de  suministro.</div>
+              <div>5)Ambiente  de negocios para la integración energética en la región. Recursos  energéticos compartidos e integración de mercados.</div>
+              <div>6)Análisis  de soluciones o adecuación regulatoria para hacer viables los intercambios  internacionales y la integración de sistemas.</div>
+            </li>
+            <li>
+            </li>
+          </ul>
+        </li>
+        <li> </li>
+        <li> </li>
+        <li> </li> 
+        
+        <li><a href="">Regulación
+          </a>
+          <ul>
+            <li><p></p></li>
+            <li><u><strong>DEFINICIÓN: </strong></u>Se  refiere a las leyes,  políticas y  reglamentos que rigen la actividad de los negocios en toda  la cadena energética. También  trata el cómo se  configura la actuación de  los reguladores,  empresas, clientes,  organizaciones  sociales de forma que  se logren los objetivos  de costos  razonables, calidad,  continuidad, universalidad,  sustentabilidad económica, sustentabilidad social y ambiental.  </li>
+            <li><p></p></li>
+            <li><u><strong>TEMÁTICAS </strong></u><u><strong>ESPECÍFICAS:</strong></u>
+  <div>1)Organización  del sector eléctrico de cada país latinoamericano. </div>
+              <div>2)Análisis  y  referenciamiento de los marcos regulatorios LA (rentabilidad e inversión y  sustentabilidad). </div>
+              <div>3)Análisis  y estudios  regionales de  precios de la energía, tarifas y cargos tarifarios. </div>
+              <div>4)Metodología  para el reconocimiento de costos en los negocios regulados.</div>
+              <div>5)Análisis  y  referenciamiento de los marcos regulatorios para las transacciones  internacionales e interconexiones existentes y su evolución histórica.</div>
+              <div>6)Regulación  para el desarrollo de la generación renovable no convencional y generación  distribuida / transmisión, distribución. </div>
+              <div>7)Referenciamiento  e información sobre políticas públicas de acceso universal del servicio  eléctrico  y políticas de  subsidios.</div>
+            </li>
+            <li>
+            </li>
+          </ul>
+        <li><a href="">Oferta energética convencional</a>
+          <ul> 
+            <li><p></p></li>
+            <li><u><strong>DEFINICIÓN: </strong></u>En la  presente plataforma se encuentran aquellas actividades que permitan el  conocimiento del estado del arte en cuanto a tecnologías convencionales  disponibles, sus  costos, su comportamiento,  así  como las buenas practicas técnicas de operación y mantenimiento de las mismas.  También se encuentran actividades vinculadas a generar conocimiento sobre  comercialización de energía mayorista y contratos de largo plazo. Se refiere  específicamente  a la  generación Hidráulica;  Térmica de: carbón-líquidos-gases; Nuclear y otras.</li>
+            <li><p></p></li>
+            <li><u><strong>TEMÁTICAS </strong></u><u><strong>ESPECÍFICAS:</strong></u>
+  <div>1)Desarrollo  del  negocio de generación Estado del  arte de las tecnologías y su oferta en el mercado.</div>
+              <div>2)Rol e importancia en la matriz presente y futura de  las diferentes tecnologías.</div>
+              <div>3)Evaluación, desarrollo  y gestión de proyectos.</div>
+              <div>4)Temas  técnicos de los elementos de generación. (Gestión de Activos en generación)</div>
+              <div>5)Sistemas  de   información y control de gestión y estadísticas,  análisis y discusión de fallas de elementos de generación. Análisis de confiabilidad</div>
+              <div>6)Ingeniería  de la  operación y mantenimiento.  Optimización de la gestión y productividad y buenas practicas y referenciamientos.</div>
+              <div>7)Conformación  del costo de generación.  Evaluación de los recursos e insumos y su comercialización / cadena  de combustibles.</div>
+              <div>8)Gestión de mercadeo y gestión  comercial.  </div>
+  </a></li>
+          </ul>
+        </li> <li><a href="">Oferta energética renovable no convencional
 
-function createSummaryAndThumb(pID,enlacetitulo){
-var div = document.getElementById(pID);
-var imgtag = "";
-var img = div.getElementsByTagName("img");
-var summ = sumario_noimg;
-
-if(img.length>=1) {
-imgtag = '<div class="contemini"><a href="' + enlacetitulo + '"><div class="miniaturas" style="background-image:url(' + img[0].src + ')"></a></div></div>';
-summ = sumario_img;
-}
-
-var summary = removeHtmlTag(div.innerHTML,summ,imgtag,enlacetitulo);
-div.innerHTML = summary;
-}
-
-function removeHtmlTag(strx,chop,imagen,enlace){
-var original=strx;
-if(strx.indexOf("<")!=-1) {
-var s = strx.split("<");
-for(var i=0;i<s.length;i++){
-if(s[i].indexOf(">")!=-1){
-s[i] = s[i].substring(s[i].indexOf(">")+1,s[i].length);
-}
-}
-strx = s.join("");
-}
-if(strx.length<=chop) {
-return original;
-}
-else {
-chop = (chop < strx.length-1) ? chop : strx.length-2;
-while(strx.charAt(chop-1)!=' ' && strx.indexOf(' ',chop)!=-1) chop++;
-strx = strx.substring(0,chop-1);
-var devolver = imagen + '<div>' + strx + '... <a class="readmore" href="' + enlace+ '">Leer m&#225;s ►</a></div>';
-return devolver;
-}
-}
-
-sumario_noimg = 382;
-sumario_img = 310;
-//]]>
-</script>
-
-
-
-
-
-  </head>
-
-  <body>
-<div id='top_up'><div id='crosscol-wrapper'><b:section class='menu-top' id='menu-top' showaddelement='no'>
-  <b:widget id='PageList1' locked='true' title='Páginas' type='PageList'>
-    <b:includable id='main'>
-  <b:if cond='data:title'><h2><data:title/></h2></b:if>
-  <div class='widget-content'>
-    <ul>
-      <b:loop values='data:links' var='link'>
-        <b:if cond='data:link.isCurrentPage'>
-          <li class='selected'><a expr:href='data:link.href'><data:link.title/></a></li>
-        <b:else/>
-          <li><a expr:href='data:link.href'><data:link.title/></a></li>
-        </b:if>
-      </b:loop>
-    </ul>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  </b:widget>
-</b:section></div></div>
-  <div id='wrap3'><div id='outer-wrapper'><div id='wrap2'>
-    <!-- skip links for text browsers -->
-    <span id='skiplinks' style='display:none;'>
-      <a href='#main'>skip to main </a> |
-      <a href='#sidebar'>skip to sidebar</a>
-    </span>
-
-
- <div id='header-wrapper'>
-    <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
-      <b:widget id='Header1' locked='true' title='Minimalista (Header)' type='Header'>
-        <b:includable id='main'>
-
-  <b:if cond='data:useImage'>
-    <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
-      <!--
-      Show image as background to text. You can't really calculate the width
-      reliably in JS because margins are not taken into account by any of
-      clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
-      width if the user is using shrink to fit.
-      This results in a margin-width's worth of pixels being cropped. If the
-      user is not using shrink to fit then we expand the header.
-      -->
-      <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                      + &quot;background-position: &quot;                      + data:backgroundPositionStyleStr + &quot;; &quot;                      + data:widthStyleStr                      + &quot;min-height: &quot; + data:height + &quot;px;&quot;                      + &quot;_height: &quot; + data:height + &quot;px;&quot;                      + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
-        <div class='titlewrapper' style='background: transparent'>
-          <h1 class='title' style='background: transparent; border-width: 0px'>
-            <b:include name='title'/>
-          </h1>
-        </div>
-        <b:include name='description'/>
-      </div>
-    <b:else/>
-      <!--Show the image only-->
-      <div id='header-inner'>
-        <a expr:href='data:blog.homepageUrl' style='display: block'>
-          <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' expr:width='data:width' style='display: block'/>
-        </a>
-        <!--Show the description-->
-        <b:if cond='data:imagePlacement == &quot;BEFORE_DESCRIPTION&quot;'>
-          <b:include name='description'/>
-        </b:if>
-      </div>
-    </b:if>
-  <b:else/>
-    <!--No header image -->
-    <div id='header-inner'>
-      <div class='titlewrapper'>
-        <h1 class='title'>
-          <b:include name='title'/>
-        </h1>
-      </div>
-      <b:include name='description'/>
-    </div>
-  </b:if>
-</b:includable>
-        <b:includable id='description'>
-  <div class='descriptionwrapper'>
-    <p class='description'><span><data:description/></span></p>
-  </div>
-</b:includable>
-        <b:includable id='title'>
-  <b:if cond='data:blog.url == data:blog.homepageUrl'>
-    <data:title/>
-  <b:else/>
-    <a expr:href='data:blog.homepageUrl'><data:title/></a>
-  </b:if>
-</b:includable>
-      </b:widget>
-    </b:section>
-</div>
-
-<div id='contenedor'>
-
-            <!-- Links-based menu added by BTemplates.com -->
-            <div class='menu'><div>
-            <!-- Links -->
-            <b:section id='menulinkswidget' maxwidgets='1' showaddelement='no'>
-              <b:widget id='LinkList11' locked='false' title='Menu - Links' type='LinkList'>
-                <b:includable id='main'>
-            
-            <b:if cond='data:title'><!--<h2><data:title/></h2>--></b:if>
-              <div>
-                <ul id='menu'>
-                 <b:loop values='data:links' var='link'>
-                   <li><a expr:href='data:link.target'><data:link.name/></a></li>
-                 </b:loop>
-               </ul><div id='slide'/>
-               <b:include name='quickedit'/>
-             </div>
-            </b:includable>
-              </b:widget>
-            </b:section>
-            <!-- /Links -->
-            </div></div>
-<script type='text/javascript'>window.onload=function() {menuSlider.init(&#39;menu&#39;,&#39;slide&#39;);}</script>
-<div id='search-conte'><b:section class='search-c' id='search-c' showaddelement='no'>
-  <b:widget id='CustomSearch1' locked='true' title='Search' type='CustomSearch'>
-    <b:includable id='main'>
-    <!-- only display title if it's non-empty -->
-    <b:if cond='data:title != &quot;&quot;'>
-      <h2 class='title'><data:title/></h2>
-    </b:if>
-
-    <div class='widget-content'>
-      <div expr:id='data:widget.instanceId + &quot;_form&quot;'>
-        <span class='cse-status'><data:loadingMsg/></span>
-      </div>
-    </div>
-
-    <!-- override gsearch.css -->
-    <style type='text/css'>
-      #uds-searchControl .gs-result .gs-title,
-      #uds-searchControl .gs-result .gs-title *,
-      #uds-searchControl .gsc-results .gsc-trailing-more-results,
-      #uds-searchControl .gsc-results .gsc-trailing-more-results * {
-        color:<data:linkColor/>;
-      }
-
-      #uds-searchControl .gs-result .gs-title a:visited,
-      #uds-searchControl .gs-result .gs-title a:visited * {
-        color:<data:visitedLinkColor/>;
-      }
-
-      #uds-searchControl .gs-relativePublishedDate,
-      #uds-searchControl .gs-publishedDate {
-        color: <data:dateColor/>;
-      }
-
-      #uds-searchControl .gs-result a.gs-visibleUrl,
-      #uds-searchControl .gs-result .gs-visibleUrl {
-        color: <data:urlColor/>;
-      }
-
-      #uds-searchControl .gsc-results {
-        border-color: <data:borderColor/>;
-        background-color: <data:backgroundColor/>;
-      }
-
-      #uds-searchControl .gsc-tabhActive {
-        border-color: <data:borderColor/>;
-        border-top-color: <data:activeBorderColor/>;
-        background-color: <data:backgroundColor/>;
-        color: <data:textColor/>;
-      }
-
-      #uds-searchControl .gsc-tabhInactive {
-        border-color: <data:borderColor/>;
-        background-color: transparent;
-        color: <data:linkColor/>;
-      }
-
-      #uds-searchClearResults {
-        border-color: <data:borderColor/>;
-      }
-
-      #uds-searchClearResults:hover {
-        border-color: <data:activeBorderColor/>;
-      }
-
-      #uds-searchControl .gsc-cursor-page {
-        color: <data:linkColor/>;
-      }
-
-      #uds-searchControl .gsc-cursor-current-page {
-        color: <data:textColor/>;
-      }
-    </style>
-
-    <b:include name='quickedit'/>
-  </b:includable>
-  </b:widget>
-</b:section></div>
-<div style='clear:both'/> 
-</div>
-</div>
- <div id='content-wrapper'>
-<div id='main-wrapper'>
-
-        <b:section class='main' id='main' showaddelement='no'>
-          <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
-            <b:includable id='main' var='top'>
-  <!-- posts -->
-  <div class='blog-posts hfeed'>
-    <b:include data='top' name='status-message'/>
-    <data:defaultAdStart/>
-    <b:loop values='data:posts' var='post'>
-      <b:if cond='data:post.isDateStart'>
-        <b:if cond='data:post.isFirstPost == &quot;false&quot;'>
-          &lt;/div&gt;&lt;/div&gt;
-        </b:if>
-      </b:if>
-      <b:if cond='data:post.isDateStart'>
-        &lt;div class=&quot;date-outer&quot;&gt;
-      </b:if>
-      <b:if cond='data:post.dateHeader'>
-        <div id='fecha'>
-<script>remplaza_fecha(&#39;<data:post.dateHeader/>&#39;);</script>
-</div>
-<b:else/>
- <div id='fecha'>
-<script>remplaza_fecha(&#39;&#39;);</script>
-</div>
-      </b:if>
-      <b:if cond='data:post.isDateStart'>
-        &lt;div class=&quot;date-posts&quot;&gt;
-      </b:if>
-      <div class='post-outer'>
-      <b:include data='post' name='post'/>
-      <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
-        <b:include data='post' name='comments'/>
-      </b:if>
-      <b:if cond='data:blog.pageType == &quot;item&quot;'>
-        <b:include data='post' name='comments'/>
-      </b:if>
-      </div>
-      <b:if cond='data:post.includeAd'>
-        <b:if cond='data:post.isFirstPost'>
-          <data:defaultAdEnd/>
-        <b:else/>
-          <data:adEnd/>
-        </b:if>
-        <div class='inline-ad'>
-          <data:adCode/>
-        </div>
-        <data:adStart/>
-      </b:if>
-      <b:if cond='data:post.trackLatency'>
-        <data:post.latencyJs/>
-      </b:if>
-    </b:loop>
-    <b:if cond='data:numPosts != 0'>
-      &lt;/div&gt;&lt;/div&gt;
-    </b:if>
-    <data:adEnd/>
-  </div>
-
-  <!-- navigation -->
-  <b:include name='nextprev'/>
-
-  <!-- feed links -->
-  <b:include name='feedLinks'/>
-
-  <b:if cond='data:top.showStars'>
-    <script src='//www.google.com/jsapi' type='text/javascript'/>
-    <script type='text/javascript'>
-      google.load(&quot;annotations&quot;, &quot;1&quot;, {&quot;locale&quot;: &quot;<data:top.languageCode/>&quot;});
-      function initialize() {
-        google.annotations.setApplicationId(<data:top.blogspotReviews/>);
-        google.annotations.createAll();
-        google.annotations.fetch();
-      }
-      google.setOnLoadCallback(initialize);
-    </script>
-  </b:if>
-</b:includable>
-            <b:includable id='backlinkDeleteIcon' var='backlink'>
-  <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
-    <a expr:href='data:backlink.deleteUrl' expr:title='data:top.deleteBacklinkMsg'>
-      <img src='//www.blogger.com/img/icon_delete13.gif'/>
-    </a>
-  </span>
-</b:includable>
-            <b:includable id='backlinks' var='post'>
-  <a name='links'/><h4><data:post.backlinksLabel/></h4>
-  <b:if cond='data:post.numBacklinks != 0'>
-    <dl class='comments-block' id='comments-block'>
-      <b:loop values='data:post.backlinks' var='backlink'>
-        <div class='collapsed-backlink backlink-control'>
-          <dt class='comment-title'>
-            <span class='backlink-toggle-zippy'>&#160;</span>
-            <a expr:href='data:backlink.url' rel='nofollow'><data:backlink.title/></a>
-            <b:include data='backlink' name='backlinkDeleteIcon'/>
-          </dt>
-          <dd class='comment-body collapseable'>
-            <data:backlink.snippet/>
-          </dd>
-          <dd class='comment-footer collapseable'>
-            <span class='comment-author'><data:post.authorLabel/> <data:backlink.author/></span>
-            <span class='comment-timestamp'><data:post.timestampLabel/> <data:backlink.timestamp/></span>
-          </dd>
-        </div>
-      </b:loop>
-    </dl>
-  </b:if>
-  <p class='comment-footer'>
-    <a class='comment-link' expr:href='data:post.createLinkUrl' expr:id='data:widget.instanceId + &quot;_backlinks-create-link&quot;' target='_blank'><data:post.createLinkLabel/></a>
-  </p>
-</b:includable>
-            <b:includable id='comment-form' var='post'>
-  <div class='comment-form'>
-    <a name='comment-form'/>
-    <h4 id='comment-post-message'><data:postCommentMsg/></h4>
-    <p><data:blogCommentMessage/></p>
-    <data:blogTeamBlogMessage/>
-    <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-    <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='300' id='comment-editor' name='comment-editor' width='80%'/>
-    <data:post.friendConnectJs/>
-    <data:post.cmtfpIframe/>
-    <script type='text/javascript'>
-      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
-    </script>
-  </div>
-<div style='clear:both'/>
-</b:includable>
-            <b:includable id='commentDeleteIcon' var='comment'>
-  <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
-    <b:if cond='data:showCmtPopup'>
-      <div class='goog-toggle-button'>
-        <div class='goog-inline-block comment-action-icon'/>
-      </div>
-    <b:else/>
-      <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
-        <img src='//www.blogger.com/img/icon_delete13.gif'/>
-      </a>
-    </b:if>
-  </span>
-</b:includable>
-            <b:includable id='comment_count_picker' var='post'>
-  <b:if cond='data:post.commentSource == 1'>
-    <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.canonicalUrl'>
-    </span>
-  <b:else/>
-    <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
-      <data:post.commentLabelFull/>:
-    </a>
-  </b:if>
-</b:includable>
-            <b:includable id='comment_picker' var='post'>
-  <b:if cond='data:post.commentSource == 1'>
-    <b:include data='post' name='iframe_comments'/>
-  <b:elseif cond='data:post.showThreadedComments'/>
-    <b:include data='post' name='threaded_comments'/>
-  <b:else/>
-    <b:include data='post' name='comments'/>
-  </b:if>
-</b:includable>
-            <b:includable id='comments' var='post'>
-  <div class='comments' id='comments'>
-    <a name='comments'/>
-    <b:if cond='data:post.allowComments'>
-      <h4>
-        <b:if cond='data:post.numComments == 1'>
-          1 <data:commentLabel/>:
-        <b:else/>
-          <data:post.numComments/> <data:commentLabelPlural/>:
-        </b:if>
-      </h4>
-
-      <b:if cond='data:post.commentPagingRequired'>
-        <span class='paging-control-container'>
-          <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'><data:post.oldestLinkText/></a>
-          &#160;
-          <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'><data:post.olderLinkText/></a>
-          &#160;
-          <data:post.commentRangeText/>
-          &#160;
-          <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'><data:post.newerLinkText/></a>
-          &#160;
-          <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'><data:post.newestLinkText/></a>
-        </span>
-      </b:if>
-
-      <dl expr:class='data:post.avatarIndentClass' id='comments-block'>
-        <b:loop values='data:post.comments' var='comment'>
-          <dt expr:class='&quot;comment-author &quot; + data:comment.authorClass' expr:id='data:comment.anchorName'>
-            <b:if cond='data:comment.favicon'>
-              <img expr:src='data:comment.favicon' height='16px' style='margin-bottom:-2px;' width='16px'/>
-            </b:if>
-            <a expr:name='data:comment.anchorName'/>
-            <b:if cond='data:blog.enabledCommentProfileImages'>
-              <data:comment.authorAvatarImage/>
-            </b:if>
-            <b:if cond='data:comment.authorUrl'>
-              <a expr:href='data:comment.authorUrl' rel='nofollow'><data:comment.author/></a>
-            <b:else/>
-              <data:comment.author/>
-            </b:if> 
-
-        </dt>
-
-          <dd class='comment-body'>
-            <b:if cond='data:comment.isDeleted'>
-              <span class='deleted-comment'><data:comment.body/></span>
-            <b:else/>
-              <p><data:comment.body/></p>
-            </b:if>
-          </dd>
-
-          <dd class='comment-footer'>
-            <span class='comment-timestamp'>
-              <a expr:href='data:comment.url' title='comment permalink'>
-                <data:comment.timestamp/>
               </a>
-              <b:include data='comment' name='commentDeleteIcon'/>
-            </span>
-          </dd>
-        </b:loop>
-      </dl>
+          <ul> 
+            <li><p></p></li>
+            <li><u><strong>DEFINICIÓN</strong></u>:  Se refiere  a las  actividades que  permitan el conocimiento del estado del arte en cuanto a tecnologías disponibles  para eólica,  solar fotovoltaica,  solar térmica, geotérmica, biocombustibles, distribuida, programa de micro PCHs regional; sus  costos, su comportamiento así como las buenas practicas técnicas de operación y  mantenimiento de las mismas. También se encuentran actividades vinculadas a  generar conocimiento sobre comercialización de energía mayorista  y créditos  de  carbono,</li>
+            <li><p></p></li>
+            <li><u><strong>TEMÁTICAS </strong></u><u><strong>ESPECÍFICAS:</strong></u>
+  <div>1)Estado  del arte de las tecnologías y su oferta en el mercado.</div>
+              <div>2)Requisitos  técnicos  para conexión y operación en la red </div>
+              <div>3)Temas  técnicos de los elementos de generación.</div>
+              <div>4)Estadísticas,  análisis y discusión de fallas de elementos de generación. Análisis de  confiabilidad e ingeniería de la operación y mantenimiento.</div>
+              <div>5)Gestión de proyectos  y financiamiento.  Elementos de regulación e incentivos.</div>
+              <div>6)Conformación  del costo de generación  ofertable.</div>
+              <div>7)Gestión comercial.</div>
+            </li>
+          </ul>
+          </li> <li><a href="">Operación e infraestructura de red
 
-      <b:if cond='data:post.commentPagingRequired'>
-        <span class='paging-control-container'>
-          <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
-            <data:post.oldestLinkText/>
-          </a>
-          <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
-            <data:post.olderLinkText/>
-          </a>
-          &#160;
-          <data:post.commentRangeText/>
-          &#160;
-          <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
-            <data:post.newerLinkText/>
-          </a>
-          <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
-            <data:post.newestLinkText/>
-          </a>
-        </span>
-      </b:if>
-      <p class='comment-footer'>
-        <b:if cond='data:post.embedCommentForm'>
-          <b:if cond='data:post.allowNewComments'>
-            <b:include data='post' name='comment-form'/>
-          <b:else/>
-            <data:post.noNewCommentsText/>
-          </b:if>
-        <b:else/>
-          <b:if cond='data:post.allowComments'>
-            <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
-          </b:if>
-        </b:if>
 
-      </p>
-    </b:if>
-<div id='backlinks-container'>
-    <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'>
-       <b:if cond='data:post.showBacklinks'>
-         <b:include data='post' name='backlinks'/>
-       </b:if>
-    </div>
-    </div>
-  </div>
-</b:includable>
-            <b:includable id='feedLinks'>
-  <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Blog feed links -->
-    <b:if cond='data:feedLinks'>
-      <div class='blog-feeds'>
-        <b:include data='feedLinks' name='feedLinksBody'/>
-      </div>
-    </b:if>
+                </a>
+            <ul> 
+              <li><p></p></li>
+              <li><u><strong>DEFINICIÓN</strong></u>:  Las buenas  practicas,  procedimientos, controles y técnicas de operación y mantenimiento de los  sistemas y los elementos de red, son el eje central de esta plataformas.  Igualmente incluye a las  centros de control  y operación, además su interacción y el mantenimiento de la infraestructura de  transmisión y  distribución de energía.</li>
+              <li><p></p></li>
+              <li><u><strong>TEMÁTICAS </strong></u><u><strong>ESPECÍFICAS:</strong></u>
+  <div>1)Manejo  de oferta y demanda en la operación. las mejores prácticas en la Administración  y operación de los mercados</div>
+                <div>2)Tecnología  aplicada para Centros de Operación y Administradores de Mercados.</div>
+                <div>3)Estructura  y funcionamiento de los mercados. Integración regional de los mercados  (Técnicos, legales y regulatorios).</div>
+                <div>4)Sistemas  de Información. Portales de mercados y precios en los distintos países.</div>
+                <div>5)Los nuevos  desafíos en la coordinación de la operación a distintos niveles.  Manejo de la generación distribuida y las ERNC.</div>
+                <div>6)Planificación  y desarrollo del  negocio de Transmisión  y Distribución Estado del arte de las tecnologías y su oferta en el mercado  Base de datos de precios de elementos de red en los países. Seguimiento de  costos de tecnologías.  Gestión y financiamiento de proyectos. </div>
+                <div>7)Temas  técnicos  de elementos de red.  (Gestión de Activos en Transmisión y Distribución)</div>
+                <div>8)Sistemas  de información y control de gestión y estadísticas, análisis y discusión de  fallas de elementos de red. Análisis de confiabilidad</div>
+                <div>9)Ingeniería  de la operación y mantenimiento. Optimización de la gestión y productividad y  buenas practicas. Referenciamientos </div>
+              </li>
+            </ul>
+            </li> <li><a href="">Redes y Sistemas Inteligentes
 
-    <b:else/> <!--Post feed links -->
-    <div class='post-feeds'>
-      <b:loop values='data:posts' var='post'>
-        <b:if cond='data:post.allowComments'>
-          <b:if cond='data:post.feedLinks'>
-            <b:include data='post.feedLinks' name='feedLinksBody'/>
-          </b:if>
-        </b:if>
-      </b:loop>
-    </div>
-  </b:if>
-</b:includable>
-            <b:includable id='feedLinksBody' var='links'>
-  <div class='feed-links'>
-  <data:feedLinksMsg/>
-  <b:loop values='data:links' var='f'>
-     <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/>)</a>
-  </b:loop>
-  </div>
-</b:includable>
-            <b:includable id='iframe_comments' var='post'>
+                  </a>
+              <ul> 
+                <li><p></p></li>
+                <li><u><strong>DEFINICIÓN</strong></u>:  Comprende  el conocimiento del estado del arte en cuanto integración de  las nuevas tecnologías, las tecnologías  de la  información y comunicaciones a los sistemas energéticos y redes eléctricas.  Asimismo el impacto,  beneficios y costos de  las mismas sobre los negocios y sus procesos.   También  contempla el  rol del cliente  y la percepción  e interacción de  este,  ante estos cambios.</li>
+                <li><p></p></li>
+                <li><u><strong>TEMÁTICAS </strong></u><u><strong>ESPECÍFICAS:</strong></u>
+  <div>1)Estado  del arte de redes  inteligentes.  (incluyendo desde  la generación  de energía hasta  cliente).</div>
+                  <div>2)Redes  inteligentes y los clientes finales. El rol activo de  los clientes, aspectos  de privacidad y confiabilidad en el uso de la información .</div>
+                  <div>3)Referenciamiento  y desarrollo integral de redes y sistemas  inteligentes. Orientación  en el  proceso.  Buenas prácticas  y lecciones aprendidas. </div>
+                  <div>4)Integración  de  las redes inteligentes en las iniciativas de ciudades inteligentes y  sustentables y soluciones en zonas rurales.</div>
+                  <div>5)Gestión  y  financiamiento de proyectos. Elementos de regulación y sustentabilidad. </div>
+                  <div>6)Seguridad  operativa y de datos de los sistemas  asociados a redes inteligentes </div>
+                </li>
+              </ul>
+              </li> <li><a href="">Innovación
 
-  <b:if cond='data:post.allowIframeComments'>
-    <script expr:src='data:post.iframeCommentSrc' type='text/javascript'/>
-    <div class='cmt_iframe_holder' expr:data-href='data:post.canonicalUrl' expr:data-viewtype='data:post.viewType'/>
+                    </a>
+                <ul> 
+                  <li><p></p></li>
+                  <li><u><strong>DEFINICIÓN</strong></u>:  La  introducción de  la innovación  tecnológicas, de gestión y de adaptación al entorno en las  empresas del sector  energético son un reto permanente y constante. Temas como la  importancia de la TIC,  el almacenamiento  de energía, y reducción de CO2, así  como la generación distribuida y el usos de las redes para otros usos no eléctricos  son partes de los temas a desarrollar en esta plataforma. </li>
+                  <li><p></p></li>
+                  <li><u><strong>TEMÁTICAS</strong> </u><u><strong>ESPECÍFICAS:</strong></u>
+  <div>1)Las  tecnologías y los procesos. Avances en los sistemas informáticos aplicables al  sector eléctrico.</div>
+                    <div>2)Las  TIC y los procesos de los negocios energéticos, seguridad / ISO 38500.</div>
+                    <div>3)Tecnologías  y avances en las soluciones de generación distribuida.</div>
+                    <div>4)Movilidad  eléctrica  sustentable y  electrificación del transporte.</div>
+                    <div>5)Soluciones  de almacenamiento de energía.</div>
+                    <div>6)Sistemas  de captura de CO2.</div>
+                    <div>7)Fomento  e inserción de la innovación en las empresas. Buenas prácticas. </div>
+                  </li>
+                </ul>
+                </li> <li><a href="">Eficiencia empresarial
 
-    <b:if cond='data:post.embedCommentForm == &quot;false&quot;'>
-      <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
-    </b:if>
-  </b:if>
-</b:includable>
-            <b:includable id='mobile-index-post' var='post'>
-  <div class='mobile-date-outer date-outer'>
-    <b:if cond='data:post.dateHeader'>
-      <div class='date-header'>
-        <span><data:post.dateHeader/></span>
-      </div>
-    </b:if>
-
-    <div class='mobile-post-outer'>
-      <a expr:href='data:post.url'>
-        <h3 class='mobile-index-title entry-title'>
-          <data:post.title/>
-        </h3>
-
-        <div class='mobile-index-arrow'>&amp;rsaquo;</div>
-
-        <div class='mobile-index-contents'>
-          <b:if cond='data:post.thumbnailUrl'>
-            <div class='mobile-index-thumbnail'>
-              <div class='Image'>
-                <img expr:src='data:post.thumbnailUrl'/>
-              </div>
-            </div>
-          </b:if>
-
-          <div class='post-body'>
-            <b:if cond='data:post.snippet'><data:post.snippet/></b:if>
-          </div>
-        </div>
-
-        <div style='clear: both;'/>
-      </a>
-
-      <div class='mobile-index-comment'>
-        <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-          <b:if cond='data:post.allowComments'>
-            <b:if cond='data:post.numComments != 0'>
-              <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><b:if cond='data:post.numComments == 1'>1 <data:top.commentLabel/><b:else/><data:post.numComments/> <data:top.commentLabelPlural/></b:if></a>
-            </b:if>
-          </b:if>
-        </b:if>
-      </div>
-    </div>
-  </div>
-</b:includable>
-            <b:includable id='mobile-main' var='top'>
-    <!-- posts -->
-    <div class='blog-posts hfeed'>
-
-      <b:include data='top' name='status-message'/>
-
-      <b:if cond='data:blog.pageType == &quot;index&quot;'>
-        <b:loop values='data:posts' var='post'>
-          <b:include data='post' name='mobile-index-post'/>
-        </b:loop>
-      <b:else/>
-        <b:loop values='data:posts' var='post'>
-          <b:include data='post' name='mobile-post'/>
-        </b:loop>
-      </b:if>
-    </div>
-
-   <b:include name='mobile-nextprev'/>
-</b:includable>
-            <b:includable id='mobile-nextprev'>
-  <div class='blog-pager' id='blog-pager'>
-    <b:if cond='data:newerPageUrl'>
-      <div class='mobile-link-button' id='blog-pager-newer-link'>
-      <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'><data:newerPageTitle/></a>
-      </div>
-    </b:if>
-
-    <b:if cond='data:olderPageUrl'>
-      <div class='mobile-link-button' id='blog-pager-older-link'>
-      <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'><data:olderPageTitle/></a>
-      </div>
-    </b:if>
-
-    <div class='mobile-link-button' id='blog-pager-home-link'>
-    <a class='home-link' expr:href='data:blog.homepageUrl'><data:homeMsg/></a>
-    </div>
-
-    <div class='mobile-desktop-link'>
-      <a class='home-link' expr:href='data:desktopLinkUrl'><data:desktopLinkMsg/></a>
-    </div>
-
-  </div>
-  <div class='clear'/>
-</b:includable>
-            <b:includable id='mobile-post' var='post'>
-  <div class='date-outer'>
-    <b:if cond='data:post.dateHeader'>
-      <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
-    </b:if>
-    <div class='date-posts'>
-      <div class='post-outer'>
-
-        <div class='post hentry uncustomized-post-template'>
-          <a expr:name='data:post.id'/>
-          <b:if cond='data:post.title'>
-            <h3 class='post-title entry-title'>
-              <b:if cond='data:post.link'>
-                <a expr:href='data:post.link'><data:post.title/></a>
-              <b:else/>
-                <b:if cond='data:post.url'>
-                  <b:if cond='data:blog.url != data:post.url'>
-                    <a expr:href='data:post.url'><data:post.title/></a>
-                  <b:else/>
-                    <data:post.title/>
-                  </b:if>
-                <b:else/>
-                  <data:post.title/>
-                </b:if>
-              </b:if>
-            </h3>
-          </b:if>
-
-          <div class='post-header'>
-            <div class='post-header-line-1'/>
-          </div>
-
-          <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id'>
-            <data:post.body/>
-            <div style='clear: both;'/> <!-- clear for photos floats -->
-          </div>
-
-          <div class='post-footer'>
-            <div class='post-footer-line post-footer-line-1'>
-              <span class='post-author vcard'>
-                <b:if cond='data:top.showAuthor'>
-                  <b:if cond='data:post.authorProfileUrl'>
-                    <span class='fn'>
-                      <a expr:href='data:post.authorProfileUrl' rel='author' title='author profile'>
-                        <data:post.author/>
                       </a>
-                    </span>
-                  <b:else/>
-                    <span class='fn'><data:post.author/></span>
-                  </b:if>
-                </b:if>
-              </span>
-
-              <span class='post-timestamp'>
-                <b:if cond='data:top.showTimestamp'>
-                  <data:top.timestampLabel/>
-                  <b:if cond='data:post.url'>
-                    <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601'><data:post.timestamp/></abbr></a>
-                  </b:if>
-                </b:if>
-              </span>
-
-              <span class='post-comment-link'>
-                <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                  <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                    <b:if cond='data:post.allowComments'>
-                      <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><b:if cond='data:post.numComments == 1'>1 <data:top.commentLabel/><b:else/><data:post.numComments/> <data:top.commentLabelPlural/></b:if></a>
-                    </b:if>
-                  </b:if>
-                </b:if>
-              </span>
-            
-
-<!-- Feature added by BTemplates.com -->
-	<b:if cond='data:post.sharePostUrl'>
-		<div class='post-share-buttons'>
-			<b:include data='post' name='shareButtons'/>
-		</div>
-	</b:if>
-
-</div>
-
-            <div class='post-footer-line post-footer-line-2'>
-              <b:if cond='data:top.showMobileShare'>
-                <div class='mobile-link-button goog-inline-block' id='mobile-share-button'>
-                  <a href='javascript:void(0);'><data:shareMsg/></a>
-                </div>
-              </b:if>
-              <b:if cond='data:top.showDummy'>
-                <div class='goog-inline-block dummy-container'><data:post.dummyTag/></div>
-              </b:if>
-            </div>
-
-          </div>
-        </div>
-
-        <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
-          <b:if cond='data:post.showThreadedComments'>
-            <b:include data='post' name='threaded_comments'/>
-          <b:else/>
-            <b:include data='post' name='comments'/>
-          </b:if>
-        </b:if>
-        <b:if cond='data:blog.pageType == &quot;item&quot;'>
-          <b:if cond='data:post.showThreadedComments'>
-            <b:include data='post' name='threaded_comments'/>
-          <b:else/>
-            <b:include data='post' name='comments'/>
-          </b:if>
-        </b:if>
-      </div>
-    </div>
-  </div>
-</b:includable>
-            <b:includable id='nextprev'>
-  <div class='blog-pager' id='blog-pager'>
-    <b:if cond='data:newerPageUrl'>
-      <span id='blog-pager-newer-link'>
-      <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'><data:newerPageTitle/></a>
-      </span>
-    </b:if>
-
-    <b:if cond='data:olderPageUrl'>
-      <span id='blog-pager-older-link'>
-      <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'><data:olderPageTitle/></a>
-      </span>
-    </b:if>
-
-    <a class='home-link' expr:href='data:blog.homepageUrl'><data:homeMsg/></a>
-
-  </div>
-  <div class='clear'/>
-</b:includable>
-            <b:includable id='post' var='post'>
-  <div class='post hentry uncustomized-post-template'>
-    <a expr:name='data:post.id'/>
-    <b:if cond='data:post.title'>
-        <h3 class='post-title entry-title'>
-     <b:if cond='data:post.link'>
-       <a expr:href='data:post.link'><data:post.title/></a>
-     <b:else/>
-        <b:if cond='data:post.url'>
-          <a expr:href='data:post.url'><data:post.title/></a>
-        <b:else/>
-          <data:post.title/>
-        </b:if>
-     </b:if>
-      </h3>
-    </b:if>
-
-    <div class='post-header'>
-    <div class='post-header-line-1'/>
-</div>
-<div class='post-body entry-content'><b:if cond='data:blog.pageType == &quot;item&quot;'>
-<data:post.body/>
-<b:else/>
-<b:if cond='data:blog.pageType == &quot;static_page&quot;'>
-<data:post.body/>
-<b:else/>
-<div expr:id='&quot;summary-&quot; + data:post.id'><data:post.body/></div>
-<script type='text/javascript'>createSummaryAndThumb(&quot;summary-<data:post.id/>&quot;,&quot;<data:post.url/>&quot;);</script>
-</b:if>
-</b:if>
+                  <ul> 
+                  <li><p></p></li>
+                    <li><u><strong>DEFINICIÓN</strong></u>:  Se  trata de  las actividades y temáticas que apuntan a la mejora de los procesos sustantivos y  corporativos  de  los distintos negocios energéticos. Incluye actividades de benchmarking, buenas  practicas y mejoras continua de los procesos. Costos operativos y elementos  de gestión eficiente (reducción de pérdidas), Gestión de los RRHH,  Gestión de los procesos económico financieros  y gestión de  los procesos de adquisición de bienes y servicios. </li>
+                    <li><p></p></li>
+                    <li><u><strong>TEMÁTICAS </strong></u><u><strong>ESPECÍFICAS:</strong></u>
+  <div>1)Gestión  de desempeño, modelos y &quot;benchmarkings&quot;  regionales técnicos y corporativos, productividad empresarial.</div>
+                      <div>2)Pérdidas  comerciales: mejoras continuas, lecciones aprendidas y buenas prácticas.</div>
+                      <div>3)Modelos  de gestión y calidad/ ISO9001 y otras.</div>
+                      <div>4)Gestión  humana  en los procesos empresariales y sus buenas prácticas.</div>
+                      <div>5)Calidad,  seguridad y salud en el trabajo/referenciamiento/mejores  practicas/ISO 18000</div>
+                      <div>6)Finanzas  Corporativas  de la Energía.  Decisiones de  inversión, financiamiento y gestión de riesgos financieros. Administración del  capital de trabajo, pérdidas y ganancias y portafolio de inversiones.</div>
+                      <div>7)Gobierno  corporativo.  Prácticas de Gobierno para el sector energético público y privado. Marco legal  y regulador. Salidas a Bolsa, Accionistas, Estado, Inversores Institucionales.  Comunicación Externa e Interna (Stakeholders).  Arquitectura de control.</div>
+                      <div>8)Optimización  de la  gestión de adquisición de suministros y servicios. Buenas  practicas de compras y contratos.  </div>
+                    </li>
+                    <li>
+                    </li>
+                    <li> </li>
+                  </ul>
+                  </li> <li><a href="">Gestión de activos
  
-      <div style='clear: both;'/> <!-- clear for photos floats -->
-    </div>
-    
-    <div class='post-footer'>
-    <div class='post-footer-line post-footer-line-1'>
-      <span class='post-author vcard'>
-        <b:if cond='data:top.showAuthor'>
-          <data:top.authorLabel/>
-          <span class='fn'><data:post.author/></span>
-        </b:if>
-      </span>
-      <span class='post-timestamp'>
-        <b:if cond='data:top.showTimestamp'>
-          <data:top.timestampLabel/>
-        <b:if cond='data:post.url'>
-          <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601'><data:post.timestamp/></abbr></a>
-        </b:if>
-        </b:if>
-      </span> 
-      <span class='reaction-buttons'>
-        <b:if cond='data:top.showReactions'>
-          <table border='0' cellpadding='0' cellspacing='0' width='100%'><tr>
-            <td class='reactions-label-cell' nowrap='nowrap' valign='top' width='1%'>
-              <span class='reactions-label'>
-              <data:top.reactionsLabel/></span>&#160;</td>
-            <td><iframe allowtransparency='true' class='reactions-iframe' expr:src='data:post.reactionsUrl' frameborder='0' name='reactions' scrolling='no'/></td>
-           </tr></table>
-        </b:if>
-      </span>
+                        </a>
+                    <ul> 
+                    <li><p></p></li>
+                      <li><u><strong>DEFINICIÓN</strong></u>:  La gestión  de activos  permite  seleccionar,  adquirir y gestionar los  activos para alcanzar un resultado deseado y sustentable. Su implementación en  empresas como  las de energía  trae con sigo importantes beneficios, mejorando la eficiencia integral de las  empresas con la identificación de las buenas prácticas a lo largo del ciclo de vida  de los activos; considerando  los aspectos de costos, riesgos,  vida útil y  desempeño.</li>
+                      <li><p></p></li>
+                      <li><u><strong>TEMÁTICAS  ESPECÍFICAS:</strong></u>
+  <div>1)Implementación  de  modelos PAS 55 e ISO 55000.</div>
+                        <div>2)Modelos  de madurez  conocimiento e  implementación. </div>
+                        <div>3)Referenciamiento de  buenas prácticas. Identificación de los factores y elementos críticos para la  implementación de la Gestión de Activos. Implementación de Modelos de Gestión ISO  55.000, otros.</div>
+                        <div>4)Reconocimiento  de  los aspectos claves de los sistemas de gestión de activos y articulación con  otros sistemas de gestión. </div>
+                        <div>5)Gestión  de  riesgos  (geopolíticos, político, regulatorios/  financieros, de mercados y climáticos ), y resilencia., identificación de buenas prácticas. </div>
+                        <div>6)Redes  y mecanismos  regionales  de apoyo en condiciones de contingencia.</div>
+                      </li>
+                    </ul>
+                    </li> <li><a href="">Clientes y calidad de los servicios
 
-      <span class='star-ratings'>
-        <b:if cond='data:top.showStars'>
-           <div expr:g:background-color='data:backgroundColor' expr:g:text-color='data:textColor' expr:g:url='data:post.absoluteUrl' g:height='42' g:type='RatingPanel' g:width='280'/>
-        </b:if>
-      </span>
-      <span class='post-comment-link'>
-        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-          <b:if cond='data:post.allowComments'>
-            <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><b:if cond='data:post.numComments == 1'>1 <data:top.commentLabel/><b:else/><data:post.numComments/> <data:top.commentLabelPlural/></b:if></a>
-          </b:if>
-        </b:if>
-      </span>
-      <!-- backlinks -->
-       <span class='post-backlinks post-comment-link'>
-         <b:if cond='data:blog.pageType != &quot;item&quot;'>
-           <b:if cond='data:post.showBacklinks'>
-             <a class='comment-link' expr:href='data:post.url + &quot;#links&quot;'><data:top.backlinkLabel/></a>
-           </b:if>
-         </b:if>
-       </span>
-     <span class='post-icons'>
-        <!-- email post links -->
-        <b:if cond='data:post.emailPostUrl'>
-          <span class='item-action'>
-          <a expr:href='data:post.emailPostUrl' expr:title='data:top.emailPostMsg'>
-              <img alt='' class='icon-action' height='13' src='http://www.blogger.com/img/icon18_email.gif' width='18'/>
-          </a>
-          </span>
-        </b:if>
-        <!-- quickedit pencil -->
-        <b:include data='post' name='postQuickEdit'/>
-      </span>
-      </div>
-      <div class='post-footer-line post-footer-line-2'>
-      <span class='post-labels'>
-        <b:if cond='data:post.labels'>
-          <data:postLabelsLabel/>
-          <b:loop values='data:post.labels' var='label'>
-            <a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='data:label.isLast != &quot;true&quot;'>,</b:if>
-          </b:loop>
-        </b:if>
-      </span>
-      </div>
-      <div class='post-footer-line post-footer-line-3'>
-      <span class='post-location'>
-        <b:if cond='data:top.showLocation'>
-          <b:if cond='data:post.location'>
-            <data:postLocationLabel/>
-            <a expr:href='data:post.location.mapsUrl' target='_blank'><data:post.location.name/></a>
-          </b:if>
-        </b:if>
-      </span>
-      </div>
-    </div>
-  </div>
-</b:includable>
-            <b:includable id='postQuickEdit' var='post'>
-  <b:if cond='data:post.editUrl'>
-    <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
-      <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
-        <img alt='' class='icon-action' height='18' src='//www.blogger.com/img/icon18_edit_allbkg.gif' width='18'/>
-      </a>
-    </span>
-  </b:if>
-</b:includable>
-            <b:includable id='shareButtons' var='post'>
-  <a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'>
-    <span class='share-button-link-text'><data:top.emailThisMsg/></span></a>
-  <a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'>
-    <span class='share-button-link-text'><data:top.blogThisMsg/></span></a>
-  <a class='goog-inline-block share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'>
-    <span class='share-button-link-text'><data:top.shareToTwitterMsg/></span></a>
-  <a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'>
-    <span class='share-button-link-text'><data:top.shareToFacebookMsg/></span></a>
-  <a class='goog-inline-block share-button sb-buzz' expr:href='data:post.sharePostUrl + &quot;&amp;target=buzz&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=415,width=690\&quot;); return false;&quot;' expr:title='data:top.shareToBuzzMsg' target='_blank'>
-    <span class='share-button-link-text'><data:top.shareToBuzzMsg/></span></a>
-  <b:if cond='data:top.showDummy'>
-    <div class='goog-inline-block dummy-container'><data:post.dummyTag/></div>
-  </b:if>
-</b:includable>
-            <b:includable id='status-message'>
-  <b:if cond='data:navMessage'>
-  <div class='status-msg-wrap'>
-    <div class='status-msg-body'>
-      <data:navMessage/>
-    </div>
-    <div class='status-msg-border'>
-      <div class='status-msg-bg'>
-        <div class='status-msg-hidden'><data:navMessage/></div>
-      </div>
-    </div>
-  </div>
-  <div style='clear: both;'/>
-  </b:if>
-</b:includable>
-            <b:includable id='threaded-comment-form' var='post'>
-  <div class='comment-form'>
-    <a name='comment-form'/>
-    <b:if cond='data:mobile'>
-      <p><data:blogCommentMessage/></p>
-      <data:blogTeamBlogMessage/>
-      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
-    <b:else/>
-      <p><data:blogCommentMessage/></p>
-      <data:blogTeamBlogMessage/>
-      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'/>
-    </b:if>
-    <data:post.friendConnectJs/>
-    <data:post.cmtfpIframe/>
-    <script type='text/javascript'>
-      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
-    </script>
-  </div>
-</b:includable>
-            <b:includable id='threaded_comment_css'>
-  <style>
-.comments {
-  clear: both;
-  margin-top: 10px;
-  margin-bottom: 0px;
-  line-height: 1em;
-}
-.comments .comments-content {
-  font-size: 13px;
-  margin-bottom: 16px;
-}
-.comments .comment .comment-actions a {
-  padding-top: 5px;
-  padding-right: 5px;
-}
-.comments .comment .comment-actions a:hover {
-  text-decoration: underline;
-}
-.comments .comments-content .comment-thread ol {
-  list-style-type: none;
-  padding: 0;
-  text-align: left;
-}
-.comments .comments-content .inline-thread {
-  padding: 0.5em 1em;
-}
-.comments .comments-content .comment-thread {
-  margin: 8px 0px;
-}
-.comments .comments-content .comment-thread:empty {
-  display: none;
-}
-.comments .comments-content .comment-replies {
-  margin-top: 1em;
-  margin-left: 36px;
-}
-.comments .comments-content .comment {
-  margin-bottom:16px;
-  padding-bottom:8px;
-}
-.comments .comments-content .comment:first-child {
-  padding-top:16px;
-}
-.comments .comments-content .comment:last-child {
-  border-bottom:0;
-  padding-bottom:0;
-}
-.comments .comments-content .comment-body {
-  position:relative;
-}
-.comments .comments-content .user {
-  font-style:normal;
-  font-weight:bold;
-}
-.comments .comments-content .icon.blog-author {
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  margin: 0 0 -4px 6px;
-}
-.comments .comments-content .datetime {
-  margin-left:6px;
-}
-.comments .comments-content .comment-header,
-.comments .comments-content .comment-content {
-  margin:0 0 8px;
-}
-.comments .comments-content .comment-content {
-  text-align:justify;
-}
-.comments .comments-content .owner-actions {
-  position:absolute;
-  right:0;
-  top:0;
-}
-.comments .comments-replybox {
-  border: none;
-  height: 250px;
-  width: 100%;
-}
-.comments .comment-replybox-single {
-  margin-top: 5px;
-  margin-left: 48px;
-}
-.comments .comment-replybox-thread {
-  margin-top: 5px;
-}
-.comments .comments-content .loadmore a {
-  display: block;
-  padding: 10px 16px;
-  text-align: center;
-}
-.comments .thread-toggle {
-  cursor: pointer;
-  display: inline-block;
-}
-.comments .continue {
-  cursor: pointer;
-}
-.comments .continue a {
-  display: block;
-  padding: 0.5em;
-  font-weight: bold;
-}
-.comments .comments-content .loadmore {
-  cursor: pointer;
-  max-height: 3em;
-  margin-top: 3em;
-}
-.comments .comments-content .loadmore.loaded {
-  max-height: 0px;
-  opacity: 0;
-  overflow: hidden;
-}
-.comments .thread-chrome.thread-collapsed {
-  display: none;
-}
-.comments .thread-toggle {
-  display: inline-block;
-}
-.comments .thread-toggle .thread-arrow {
-  display: inline-block;
-  height: 6px;
-  width: 7px;
-  overflow: visible;
-  margin: 0.3em;
-  padding-right: 4px;
-}
-.comments .thread-expanded .thread-arrow {
-  background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVR42mNgwAfKy8v/48I4FeA0AacVDFQBAP9wJkE/KhUMAAAAAElFTkSuQmCC&quot;) no-repeat scroll 0 0 transparent;
-}
-.comments .thread-collapsed .thread-arrow {
-  background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAJUlEQVR42mNgAILy8vL/DLgASBKnApgkVgXIkhgKiNKJ005s4gDLbCZBiSxfygAAAABJRU5ErkJggg==&quot;) no-repeat scroll 0 0 transparent;
-}
-.comments .avatar-image-container {
-  float: left;
-  width: 36px;
-  max-height: 36px;
-  overflow: hidden;
-}
-.comments .avatar-image-container img {
-  width: 36px;
-}
-.comments .comment-block {
-  margin-left: 48px;
-  position: relative;
-}
+                          </a>
+                      <ul> 
+                      <li><p></p></li>
+                        <li><u><strong>DEFINICIÓN</strong></u>:  Se  refiere al mejoramiento continuo tendiente a la  excelencia en la calidad de los servicios y la relación con los clientes.  Incluye  procesos  de atención al cliente,  relacionamiento, comunicación, gestión comercial, calidad del servicio objetivas y percibida,  etc.</li>
+                        
+                        <li><p></p></li>
+                        <li><u><strong>TEMÁTICAS  ESPECÍFICAS:</strong></u>
+  <div>1)Benchmarking de Calidad objetiva y percibida.</div>
+                          <div>2)Buenas  prácticas de atención, relacionamiento y comunicación con los clientes. SAC y  call  centers.</div>
+                          <div>3)Metodologías  y procedimientos para la fiscalización de la calidad de los servicios. Procesos determinación de metas y fiscalización. </div>
+                          <div>4)Implementación  de la cultura de servicio al cliente a lo interno de las empresas. </div>
+                        </li>
+                      </ul>
+                      </li> <li><a href="">Eficiencia energética
 
-/* Responsive styles. */
-@media screen and (max-device-width: 480px) {
-  .comments .comments-content .comment-replies {
-    margin-left: 0;
-  }
-}
-  </style>
-</b:includable>
-            <b:includable id='threaded_comment_js' var='post'>
-  <script defer='defer' expr:src='data:post.commentSrc' type='text/javascript'/>
 
-  <script type='text/javascript'>
-    (function() {
-      var items = <data:post.commentJso/>;
-      var msgs = <data:post.commentMsgs/>;
-      var postId = &#39;<data:post.id/>&#39;;
-      var feed = &#39;<data:post.commentFeed/>&#39;;
-      var authorName = &#39;<data:post.author/>&#39;;
-      var authorUrl = &#39;<data:post.authorUrl/>&#39;;
-      var blogId = &#39;<data:top.id/>&#39;;
-      var baseUri = &#39;<data:post.commentBase/>&#39;;
+                            </a>
+                        <ul> 
+                        <li><p></p></li>
+                          <li><u><strong>DEFINICIÓN</strong></u>:  La eficiencia energética se define  bajo el paradigma de “cómo conseguir  mucho usando poco” (eficiencia), lo que requerirá realmente de cambios  significativos en la manera en que se consume la energía eléctrica  (comportamiento de la sociedad), y como los usuarios utilizarán menos energía  eléctrica pero logran gozar de igual o mejor calidad de vida.</li>
+                          <li><p></p></li>
+                          <li><u><strong>TEMÁTICAS  ESPECÍFICAS:</strong></u>
+  <div>1)Foro  de políticas y normativas en eficiencia energética a nivel latinoamericano . </div>
+                            <div>2)Señales  regulatorias  tendientes a dar viabilidad a la eficiencia  energética. </div>
+                            <div>3)Análisis  y  relaciones de beneficio – costo de la implementación de la eficiencia  energética para las empresas eléctricas. Mecanismos de financiamiento  de proyectos de EE<u>.</u></div>
+                            <div>4)Educación  y  cambio cultural tendiente a viabilizar la eficiencia energética. Experiencias y  prácticas exitosas. </div>
+                            <div>5)Prácticas  de eficiencia energética en los procesos diseño, construcción, operación y  mantenimiento de la cadena del servicio.   ESCO</div>
+                            <div>6)Estado  del  Arte en cuanto a mejoras de eficiencia energética en  los clientes, casos prácticos y el rol de las empresas. </div>
+                          </li>
+                        </ul>
+                        </li> <li><a href="">Sostenibilidad ambiental, sociedad y gestión comunitaria
 
-// <![CDATA[
-      feed += '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
-      var cursor = null;
-      if (items && items.length > 0) {
-        cursor = parseInt(items[items.length - 1].timestamp) + 1;
-      }
 
-      var bodyFromEntry = function(entry) {
-        if (entry.gd$extendedProperty) {
-          for (var k in entry.gd$extendedProperty) {
-            if (entry.gd$extendedProperty[k].name == 'blogger.contentRemoved') {
-              return '<span class="deleted-comment">' + entry.content.$t + '</span>';
-            }
-          }
-        }
-        return entry.content.$t;
-      }
+                              </a>
+                          <ul> 
+                            <li><p></p></li>
+                            <li><u><strong>DEFINICIÓN</strong></u>:  Se  incluyen actividades que permitan hacer un seguimiento de las políticas y  normativas de aplicación global y regional, su impacto y oportunidades en las  empresas del sector energético;  además de las buenas practicas  en la materia  de sustentabilidad basada en sus tres soportes básicos: financiero, social y  medioambiental. De esta forma se incluyen todas las actividades que permitan una mejor  relación de los sectores energéticos con la sociedad y las comunidades;  a las cuales le brindan sus servicios, con el  objetivo de no solamente generar relaciones cliente-proveedor, sino una  comprensión de las distintas visiones y necesidades para generar un clima que  permita el desarrollo del sector energético, es el objetivo de esta plataforma.</li>
+                            <li><p></p></li>
+                            <li><u><strong>TEMÁTICAS  ESPECÍFICAS:</strong></u>
+                              <div>1)Seguimiento  de las políticas y normas globales y regionales, Análisis comparativo  y tendencias en la normativa ambiental de la región.</div>
+                              <div>2)Sostenibilidad  corporativa. Imagen, responsabilidad, estrategias y buenas prácticas  ambientales </div>
+                              <div>3)Licenciamiento ambiental, social y  predial para la viabilidad y sostenibilidad de expansiones. Etapas (Ope.  y Const.). Guías metodológicas y protocolos para le prevención de conflictos en  el desarrollo de proyectos energéticos.</div>
+                              <div>4)Relacionamiento con las partes  interesadas. Aspectos sociológicos de la energía y su comunicación.</div>
+                              <div>5)Orientación hacia la  responsabilidad social - Implementación ISO 26000.</div>
+                              <div>6)Buenas prácticas para la gestión  comunitaria de los negocios energéticos y estudio de casos.</div>
+                              <div>7)Impactos y oportunidades en los  negocios energéticos.</div>
+                            </li>
+                          </ul>
+                          
+                          </li> 
+        </li> 
+         <li><a href="">Cambio climático
 
-      var parse = function(data) {
-        cursor = null;
-        var comments = [];
-        if (data && data.feed && data.feed.entry) {
-          for (var i = 0, entry; entry = data.feed.entry[i]; i++) {
-            var comment = {};
-            // comment ID, parsed out of the original id format
-            var id = /blog-(\d+).post-(\d+)/.exec(entry.id.$t);
-            comment.id = id ? id[2] : null;
-            comment.body = bodyFromEntry(entry);
-            comment.timestamp = Date.parse(entry.published.$t) + '';
-            if (entry.author && entry.author.constructor === Array) {
-              var auth = entry.author[0];
-              if (auth) {
-                comment.author = {
-                  name: (auth.name ? auth.name.$t : undefined),
-                  profileUrl: (auth.uri ? auth.uri.$t : undefined),
-                  avatarUrl: (auth.gd$image ? auth.gd$image.src : undefined)
-                };
-              }
-            }
-            if (entry.link) {
-              if (entry.link[2]) {
-                comment.link = comment.permalink = entry.link[2].href;
-              }
-              if (entry.link[3]) {
-                var pid = /.*comments\/default\/(\d+)\?.*/.exec(entry.link[3].href);
-                if (pid && pid[1]) {
-                  comment.parentId = pid[1];
-                }
-              }
-            }
-            comment.deleteclass = 'item-control blog-admin';
-            if (entry.gd$extendedProperty) {
-              for (var k in entry.gd$extendedProperty) {
-                console.log(entry.gd$extendedProperty[k].name + ' - ' + entry.gd$extendedProperty[k].value);
-                if (entry.gd$extendedProperty[k].name == 'blogger.itemClass') {
-                  comment.deleteclass += ' ' + entry.gd$extendedProperty[k].value;
-                }
-              }
-            }
-            comments.push(comment);
-          }
-        }
-        return comments;
-      };
 
-      var paginator = function(callback) {
-        if (hasMore()) {
-          var url = feed;
-          if (cursor) {
-            url += '&published-min=' + new Date(cursor).toISOString();
-          }
-          window.bloggercomments = function(data) {
-            var parsed = parse(data);
-            cursor = parsed.length < 50 ? null
-                : parseInt(parsed[parsed.length - 1].timestamp) + 1
-            callback(parsed);
-            window.bloggercomments = null;
-          }
-          url += '&callback=bloggercomments';
-          var script = document.createElement('script');
-          script.type = 'text/javascript';
-          script.src = url;
-          document.getElementsByTagName('head')[0].appendChild(script);
-        }
-      };
-      var hasMore = function() {
-        return !!cursor;
-      };
-      var getMeta = function(key, comment) {
-        if ('iswriter' == key) {
-          var matches = !!comment.author
-              && comment.author.name == authorName
-              && comment.author.profileUrl == authorUrl;
-          return matches ? 'true' : '';
-        } else if ('deletelink' == key) {
-          return baseUri + '/delete-comment.g?blogID=' + blogId + '&postID=' + comment.id;
-        } else if ('deleteclass' == key) {
-          return comment.deleteclass;
-        }
-        return '';
-      };
-
-      var replybox = null;
-      var replyUrlParts = null;
-      var replyParent = undefined;
-
-      var onReply = function(commentId, domId) {
-        if (replybox == null) {
-          // lazily cache replybox, and adjust to suit this style:
-          replybox = document.getElementById('comment-editor');
-          if (replybox != null) {
-            replybox.height = '250px';
-            replybox.style.display = 'block';
-            replyUrlParts = replybox.src.split('#');
-          }
-        }
-        if (replybox && (commentId !== replyParent)) {
-          document.getElementById(domId).insertBefore(replybox, null);
-          replybox.src = replyUrlParts[0]
-              + (commentId ? '&parentID=' + commentId : '')
-              + '#' + replyUrlParts[1];
-          replyParent = commentId;
-        }
-      };
-
-      var tok = 'comment-form_';
-      var hash = window.location.hash || '';
-      var startThread = hash.indexOf(tok) == 1 ? hash.substring(tok.length + 1) : undefined;
-
-      // Configure commenting API:
-      var configJso = {
-        'maxDepth': 2
-      };
-      var provider = {
-        'id': postId,
-        'data': items,
-        'loadNext': paginator,
-        'hasMore': hasMore,
-        'getMeta': getMeta,
-        'onReply': onReply,
-        'rendered': true,
-        'initReplyThread': startThread,
-        'config': configJso,
-        'messages': msgs
-      };
-
-      var render = function() {
-        if (window.goog && window.goog.comments) {
-          var holder = document.getElementById('comment-holder');
-          window.goog.comments.render(holder, provider);
-        }
-      };
-
-      // render now, or queue to render when library loads:
-      if (window.goog && window.goog.comments) {
-        render();
-      } else {
-        window.goog = window.goog || {};
-        window.goog.comments = window.goog.comments || {};
-        window.goog.comments.loadQueue = window.goog.comments.loadQueue || [];
-        window.goog.comments.loadQueue.push(render);
-      }
-    })();
-// ]]>
-  </script>
-</b:includable>
-            <b:includable id='threaded_comments' var='post'>
-  <b:include name='threaded_comment_css'/>
-
-  <div class='comments' id='comments'>
-    <a name='comments'/>
-    <h4>
-      <b:if cond='data:post.numComments == 1'>
-        1 <data:commentLabel/>:
-      <b:else/>
-        <data:post.numComments/> <data:commentLabelPlural/>:
-      </b:if>
-    </h4>
-
-    <div class='comments-content'>
-      <b:if cond='data:post.embedCommentForm'>
-        <b:include data='post' name='threaded_comment_js'/>
-      </b:if>
-      <div id='comment-holder'>
-         <data:post.commentHtml/>
-      </div>
-    </div>
-
-    <p class='comment-footer'>
-      <b:if cond='data:post.allowNewComments'>
-        <b:include data='post' name='threaded-comment-form'/>
-      <b:else/>
-        <data:post.noNewCommentsText/>
-      </b:if>
-    </p>
-
-    <b:if cond='data:showCmtPopup'>
-      <div id='comment-popup'>
-        <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
-        </iframe>
-      </div>
-    </b:if>
-
-    <div id='backlinks-container'>
-    <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'>
-       <b:if cond='data:post.showBacklinks'>
-         <b:include data='post' name='backlinks'/>
-       </b:if>
-    </div>
-    </div>
-  </div>
-</b:includable>
-          </b:widget>
-        </b:section>
-</div>
-      <div id='sidebar-wrapper'>
-        <b:section class='sidebar' id='sidebar' preferred='yes'>
-          <b:widget id='HTML3' locked='false' title='Blogger templates' type='HTML'>
-            <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-          </b:widget>
-          <b:widget id='PopularPosts1' locked='false' title='Popular posts' type='PopularPosts'>
-            <b:includable id='main'>
-  <b:if cond='data:title'><h2><data:title/></h2></b:if>
-  <div class='widget-content popular-posts'>
-    <ul>
-      <b:loop values='data:posts' var='post'>
-      <li>
-        <b:if cond='data:showThumbnails == &quot;false&quot;'>
-          <b:if cond='data:showSnippets == &quot;false&quot;'>
-            <!-- (1) No snippet/thumbnail -->
-            <a expr:href='data:post.href'><data:post.title/></a>
-          <b:else/>
-            <!-- (2) Show only snippets -->
-            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-            <div class='item-snippet'><data:post.snippet/></div>
-          </b:if>
-        <b:else/>
-          <b:if cond='data:showSnippets == &quot;false&quot;'>
-            <!-- (3) Show only thumbnails -->
-            <div class='item-thumbnail-only'>
-              <b:if cond='data:post.thumbnail'>
-                <div class='item-thumbnail'>
-                  <a expr:href='data:post.href' target='_blank'>
-                    <img alt='' border='0' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
-                  </a>
-                </div>
-              </b:if>
-              <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-            </div>
-            <div style='clear: both;'/>
-          <b:else/>
-            <!-- (4) Show snippets and thumbnails -->
-            <div class='item-content'>
-              <b:if cond='data:post.thumbnail'>
-                <div class='item-thumbnail'>
-                  <a expr:href='data:post.href' target='_blank'>
-                    <img alt='' border='0' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
-                  </a>
-                </div>
-              </b:if>
-              <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-              <div class='item-snippet'><data:post.snippet/></div>
-            </div>
-            <div style='clear: both;'/>
-          </b:if>
-        </b:if>
-      </li>
-      </b:loop>
-    </ul>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-          </b:widget>
-          <b:widget id='FollowByEmail1' locked='false' title='Email suscription' type='FollowByEmail'>
-            <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'><h2 class='title'><data:title/></h2></b:if>
-  <div class='widget-content'>
-    <div class='follow-by-email-inner'>
-      <form action='http://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;http://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
-        <table width='100%'>
-          <tr>
-            <td>
-              <input class='follow-by-email-address' name='email' placeholder='Email address...' type='text'/>
-            </td>
-            <td width='64px'>
-              <input class='follow-by-email-submit' type='submit' value='Submit'/>
-            </td>
-          </tr>
-        </table>
-        <input expr:value='data:feedPath' name='uri' type='hidden'/>
-        <input name='loc' type='hidden' value='en_US'/>
-      </form>
-    </div>
-  </div>
-  <span class='item-control blog-admin'>
-    <b:include name='quickedit'/>
-  </span>
-</b:includable>
-          </b:widget>
-        </b:section>
-<div id='sidebar-wrapper2'>
-<b:section class='sidebar' id='column1' showaddelement='yes'>
-  <b:widget id='Label1' locked='false' title='Tags' type='Label'>
-    <b:includable id='main'>
-  <b:if cond='data:title'>
-    <h2><data:title/></h2>
-  </b:if>
-  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
-    <b:if cond='data:display == &quot;list&quot;'>
-      <ul>
-      <b:loop values='data:labels' var='label'>
-        <li>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-          <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-          </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </li>
-      </b:loop>
-      </ul>
-    <b:else/>
-      <b:loop values='data:labels' var='label'>
-        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-          <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-          </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </span>
-      </b:loop>
-    </b:if>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  </b:widget>
-</b:section>
-<b:section class='sidebar' id='column2' showaddelement='yes'>
-  <b:widget id='BlogArchive1' locked='false' title='Archives' type='BlogArchive'>
-    <b:includable id='main'>
-  <b:if cond='data:title'>
-    <h2><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-  <div id='ArchiveList'>
-  <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
-    <b:if cond='data:style == &quot;HIERARCHY&quot;'>
-     <b:include data='data' name='interval'/>
-    </b:if>
-    <b:if cond='data:style == &quot;FLAT&quot;'>
-      <b:include data='data' name='flat'/>
-    </b:if>
-    <b:if cond='data:style == &quot;MENU&quot;'>
-      <b:include data='data' name='menu'/>
-    </b:if>
-  </div>
-  </div>
-  <b:include name='quickedit'/>
-  </div>
-</b:includable>
-    <b:includable id='flat' var='data'>
-  <ul class='flat'>
-    <b:loop values='data:data' var='i'>
-      <li class='archivedate'>
-        <a expr:href='data:i.url'><data:i.name/></a> (<data:i.post-count/>)
-      </li>
-    </b:loop>
-  </ul>
-</b:includable>
-    <b:includable id='interval' var='intervalData'>
-  <b:loop values='data:intervalData' var='i'>
-      <ul class='hierarchy'>
-        <li expr:class='&quot;archivedate &quot; + data:i.expclass'>
-          <b:include data='i' name='toggle'/>
-          <a class='post-count-link' expr:href='data:i.url'><data:i.name/></a>
-            <span class='post-count' dir='ltr'>(<data:i.post-count/>)</span>
-          <b:if cond='data:i.data'>
-            <b:include data='i.data' name='interval'/>
-          </b:if>
-          <b:if cond='data:i.posts'>
-            <b:include data='i.posts' name='posts'/>
-          </b:if>
-        </li>
-      </ul>
-  </b:loop>
-</b:includable>
-    <b:includable id='menu' var='data'>
-  <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
-    <option value=''><data:title/></option>
-    <b:loop values='data:data' var='i'>
-      <option expr:value='data:i.url'><data:i.name/> (<data:i.post-count/>)</option>
-    </b:loop>
-  </select>
-</b:includable>
-    <b:includable id='posts' var='posts'>
-  <ul class='posts'>
-    <b:loop values='data:posts' var='i'>
-      <li><a expr:href='data:i.url'><data:i.title/></a></li>
-    </b:loop>
-  </ul>
-</b:includable>
-    <b:includable id='toggle' var='interval'>
-  <b:if cond='data:interval.toggleId'>
-  <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
-    <a class='toggle' href='javascript:void(0)'>
-      <span class='zippy toggle-open'>&#9660;&#160;</span>
-    </a>
-  <b:else/>
-    <a class='toggle' href='javascript:void(0)'>
-      <span class='zippy'>
-        <b:if cond='data:blog.languageDirection == &quot;rtl&quot;'>
-          &#9668;&#160;
-        <b:else/>
-          &#9658;&#160;
-        </b:if>
-      </span>
-    </a>
-  </b:if>
- </b:if>
-</b:includable>
-  </b:widget>
-</b:section>
-<div style='clear: both;'/> 
-</div>
-</div>
-
-      <!-- spacer for skins that want sidebar and main to be the same height-->
-      <div class='clear'>&#160;</div>
-    </div> <!-- end content-wrapper --> 
- <div style='clear:both'/>
-</div>
-  </div><div id='footer-wrapper'><div id='after-footer'>
-     <div id='columnaf1'>
-      <b:section class='columna1' id='columna1'>
-        <b:widget id='HTML2' locked='false' title='Blogroll' type='HTML'>
-          <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-        </b:widget>
-      </b:section>
-</div>
-<div id='columnaf3'><b:section class='columna3' id='columna3'>
-  <b:widget id='HTML1' locked='false' title='About' type='HTML'>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
-</b:section>
-</div>
-<div id='columnaf2'><b:section class='columna2' id='columna2'>
-  <b:widget id='Label2' locked='false' title='Labels' type='Label'>
-    <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2><data:title/></h2>
-  </b:if>
-  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
-    <b:if cond='data:display == &quot;list&quot;'>
-      <ul>
-        <b:loop values='data:labels' var='label'>
-          <li>
-            <b:if cond='data:blog.url == data:label.url'>
-              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-            <b:else/>
-              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-            </b:if>
-            <b:if cond='data:showFreqNumbers'>
-              <span dir='ltr'>(<data:label.count/>)</span>
-            </b:if>
-          </li>
-        </b:loop>
-      </ul>
-    <b:else/>
-      <b:loop values='data:labels' var='label'>
-        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-          <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-          </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </span>
-      </b:loop>
-    </b:if>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  </b:widget>
-</b:section>
-</div>
-</div><!--  ATENTION DISTRIBUTORS AND USERS: YOU ARE ALLOWED TO DISTRIBUTE THIS TEMPLATE, BUT YOU CAN'T ADD ANY LINK ON THE FOOTER.PLEASE, DO NOT REMOVE THE FOOTER CREDIT LINK. ATENCION DISTRIBUIDORES Y USUARIOS: ESTA PLANTILLA SE PUEDE REDISTRIBUIR, PERO, NO SE PUEDE AGREGAR UN LINK EN EL FOOTER, FAVOR DE NO REMOVER LOS CREDITOS.
-  --><div id='end2'><div style='width:980px; height:30px; position:relative; margin:auto; padding:0;'><span style='position:absolute; float:left; font-size:14px; margin:0px; padding: 5px 0 0 10px;'><a expr:href='data:blog.homepageUrl'><data:blog.title/></a> Copyright &#169; 2011 | Tema diseñado por: 
-<a href='http://www.compartidisimo.com/' target='_blank'>compartidisimo</a></span>
-<a href='#outer-wrapper' onclick='new Effect.ScrollTo(&quot;outer-wrapper&quot;,{offset:-140}); return false'><span style='position:absolute; padding: 0 0 10px 100px; left: 230px; margin: 0 0 0 600px; font-size:15px; color:#ccc;'>&#8593;Top</span></a></div></div><!-- end outer-wrapper -->
-</div>
+                              </a>
+                          <ul> 
+                            <li><p></p></li>
+                            <li><u><strong>DEFINICIÓN</strong></u>:  Se incluyen actividades que  permitan hacer un seguimiento de las políticas y normativas de aplicación  global y regional, su impacto y oportunidades en las empresas del sector  energético debido al cambio climático.</li>
+                            <li><p></p></li>
+                            <li><u><strong>TEMÁTICAS  ESPECÍFICAS:</strong></u>
+                              <div>1)Seguimiento  de la agenda,  análisis comparativo y tendencias  de compromisos internacionales de lucha contra cambio climático global con  enfoque regional. Posicionamiento  proactivo junto al sector energético regional, consolidando acciones y  necesidades regionales en documento específico. </div>
+                              <div>2)Cambio climático. Mitigación,  adaptación, tecnología y financiamiento. Análisis prospectivos de mediano y  largo plazo sobre los impactos del cambio climático en las fuentes renovables  Gestión integrada de recursos naturales.</div>
+                              <div>3)Mecanismos económicos de traslados  de costos de carbono a la energía eléctrica.  Mecanismos de comercio de reducción de emisiones.</div>
+                              <div>4)Estrategias de las empresas frente  al  cambio climático.  Carbono neutralidad, huella de carbono y conceptos de nuevas tecnologías  aplicables.</div>
+                            </li>
+                          </ul>
+        </li> 
+        </li>  <li><a href="">Integración  comercial industrial y  de servicios </a>
+                          <ul> 
+                            <li><p></p></li>
+                            <li><u><strong>DEFINICIÓN</strong></u>:  Es la  plataforma que permita generar actividades que colaboren a integrar la demanda y la oferta de productos y servicios a nivel  regional. Incluye el fomento regional del intercambio  comercial y la  integración  de cadenas productivas;  y de  profesionales en la región,  que  nos permita generar escala para integrarnos a las cadenas de valor  mundial.  </li>
+                            <li><p></p></li>
+                            <li><u><strong>TEMÁTICAS  ESPECÍFICAS:</strong></u>
+                              <div>1)Portales  de oferta de productos y servicios. Bases de proveedores de suministros y  servicios</div>
+                              <div>2)Portales  de demanda.</div>
+                              <div>3)Normativas  técnicas regionales, control de calidad y bases de datos de casos post-venta.</div>
+                              <div>4)Implementación  de redes de Networking,  entre grupos de interés del sector, para fomentar las  relaciones empresariales y profesionales  con el objeto de integrar las cadenas de  valor.</div>
+                              <div>
+                              </div>
+                            </li>
+                          </ul>
+                          
+                          </li> 
+        </li>  <li>
+                          <ul> 
+                            <li>
+                             
+                            </li>
+                          </ul>
+                          
+                          </li> 
+        </li>  <li>
+                          <ul> 
+                            <li>
+                              
+                            </li>
+                          </ul>
+                          
+                          </li> 
+        </li>  <li>
+                          <ul> 
+                            <li>
+                             
+                            </li>
+                          </ul>
+                          
+                          </li> 
+        </li> 
+          </li> 
+        </li>  <li>
+                          <ul> 
+                            <li>
+                              
+</li>
+                          </ul>
+                          
+                          </li> 
+        </li> 
+          </li> 
+        </li>  
+        </li> 
+          </li> 
+        </li>  <li>
+                          
+                          </li> 
+        </li> 
+    </ul></td>
+  </tr>
+  <tr>
+    <td colspan="3" class="encuesta">&nbsp;</td>
+    <td colspan="-2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="4" class="encuesta"><img src="final.png" width="1156" height="115" /></td>
+  </tr>
+  <tr>
+    <td colspan="3" class="encuesta">&nbsp;</td>
+    <td colspan="-2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3" class="encuesta">&nbsp;</td>
+    <td colspan="-2">&nbsp;</td>
+  </tr>
+</table>
+<form id="form1" name="form1" method="post" action="">
+  <label></label>
+</form>
 </body>
 </html>
